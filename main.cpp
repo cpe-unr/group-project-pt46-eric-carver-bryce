@@ -46,10 +46,10 @@ int main(int argc, char* argv[]) {
 	std::vector<std::string> files;
 	files = dir.getFileNames(argv[1]); //Audio files are stored in vector: files
 
-	std::vector<Wav> wavObjects;
+	std::vector<Wav*> wavObjects;
 	for(int i=0; i < files.size(); i++){ 
-		Wav wav;
-		wav.readFile(files[i]);
+		Wav* wav;
+		wav->readFile(files[i]);
 		wavObjects.push_back(wav); //Wav Objects that hold buffers and technical info in 							vector: wavObjects
 	}
 
