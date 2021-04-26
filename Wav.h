@@ -25,6 +25,7 @@ public:
 
 public:
     unsigned char *getBuffer();
+    short *getShortBuffer();
     int getBufferSize() const;
 };
 

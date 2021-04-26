@@ -1,15 +1,7 @@
-/*
- * This class is designed to work with PCM 8-bit mono wavefiles.
- * It makes many assumptions about the format of the wave as a result.
- * It will NOT work with stereo files or any other bit-depth than 8 bits.
- */
-
 #include <string>
 #include <fstream>
 #include <iostream>
 #include "Wav.h"
-
-
 
 void Wav::readFile(const std::string &fileName) {
     std::ifstream file(fileName,std::ios::binary | std::ios::in);
@@ -21,9 +13,13 @@ void Wav::readFile(const std::string &fileName) {
     }
 }
 
-
 unsigned char *Wav::getBuffer(){
     return buffer;
+}
+
+short *Wav::getShortBuffer(){
+    short* shortBuffer = reinterpret_cast<short*>(buffer);
+    return shortBuffer;
 }
 
 void Wav::writeFile(const std::string &outFileName) {

@@ -1,6 +1,14 @@
 /** @file */
 #include <iostream>
 
+#include "Wav.h"
+
+const std::string eightbitmono = "yes-8bit-mono.wav";
+const std::string eightbitstereo = "yes-8-bit-stereo.wav";
+const std::string sixteenbitmono = "yes-16-bit-mono.wav";
+const std::string sixteenbitstereo = "yes-26-bit-stereo.wav";
+
+
 /**
  * \brief   The function bar.
  *
@@ -25,7 +33,11 @@ void fn(){
 
 }
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+int main(int argc, char* argv[]) {
+	std::cout << "Hello, World!" << std::endl;
+	/*Wav wav;
+	wav.readFile(eightbitstereo);
+	std::cout << wav.waveHeader.fmt_chunk_size << std::endl;
+	std::cout << wav.waveHeader.metadata_header << std::endl;*/
+	return 0;
 }
