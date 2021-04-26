@@ -1,10 +1,22 @@
 #include <iostream>
 #include "directory.h"
 
-vector<string> Directory::getFileNames(std::string path){
+std::vector<std::string> Directory::getFileNames(const char* path){
 	
-	for(const auto & entry : fs::directory_iterator(path)){
-		std::cout << entry.path << std::endl;
-		i++
+	struct dirent *d;
+	DIR *dr;
+	dr = opendir(path);
+	std::vector<std::string> files;
+	
+	if(dr != NULL){
+		while((d = readdir(dr)) != NULL){
+			//std::cout << d->d_name << std::endl;
+			files.push_back(d->d_name);
+		}
 	}
+	
+	else{
+	}
+
+	return files;
 }

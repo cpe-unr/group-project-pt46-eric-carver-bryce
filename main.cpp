@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "Wav.h"
+#include "directory.h"
 
 const std::string eightbitmono = "yes-8bit-mono.wav";
 const std::string eightbitstereo = "yes-8-bit-stereo.wav";
@@ -34,7 +35,16 @@ void fn(){
 }
 
 int main(int argc, char* argv[]) {
-	std::cout << "Hello, World!" << std::endl;
+	if(argc != 2){
+		std::cout << "Correct Usage: ./audioprocessor audiofiles" <<std::endl;
+		return 0;
+	}
+
+	Directory dir;
+	std::vector<std::string> files;
+	files = dir.getFileNames(argv[1]);
+	//std::cout << files[1] << std::endl;
+
 	/*Wav wav;
 	wav.readFile(eightbitstereo);
 	std::cout << wav.waveHeader.fmt_chunk_size << std::endl;

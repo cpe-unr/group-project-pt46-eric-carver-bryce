@@ -1,3 +1,6 @@
+#ifndef DIRECTORY_H
+#define DIRECTORY_H
+
 #include <string>
 #include <vector>
 #include <dirent.h>
@@ -6,6 +9,7 @@ class Directory {
 private:
 	std::string path;
 public:
-	vector<string> getFileNames(std::string path);
+	std::vector<std::string> getFileNames(const char* path);
 
 };
+#endif
