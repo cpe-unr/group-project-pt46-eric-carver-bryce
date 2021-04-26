@@ -1,5 +1,6 @@
 /** @file */
 #include <iostream>
+#include <vector>
 
 #include "Wav.h"
 #include "directory.h"
@@ -35,6 +36,7 @@ void fn(){
 }
 
 int main(int argc, char* argv[]) {
+	
 	if(argc != 2){
 		std::cout << "Correct Usage: ./audioprocessor audiofiles" <<std::endl;
 		return 0;
@@ -42,12 +44,14 @@ int main(int argc, char* argv[]) {
 
 	Directory dir;
 	std::vector<std::string> files;
-	files = dir.getFileNames(argv[1]);
-	//std::cout << files[1] << std::endl;
+	files = dir.getFileNames(argv[1]); //Audio files are stored in vector: files
 
-	/*Wav wav;
-	wav.readFile(eightbitstereo);
-	std::cout << wav.waveHeader.fmt_chunk_size << std::endl;
-	std::cout << wav.waveHeader.metadata_header << std::endl;*/
+	std::vector<Wav> wavObjects;
+	for(int i=0; i < files.size(); i++){ 
+		Wav wav;
+		wav.readFile(files[i]);
+		wavObjects.push_back(wav); //Wav Objects that hold buffers and technical info in 							vector: wavObjects
+	}
+
 	return 0;
 }

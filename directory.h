@@ -6,10 +6,9 @@
 #include <dirent.h>
 
 class Directory {
-private:
-	std::string path;
 public:
 	std::vector<std::string> getFileNames(const char* path);
+	bool hasFiles(const char* path);
 
 };
 #endif
