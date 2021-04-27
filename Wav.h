@@ -8,6 +8,7 @@
 #include "WaveHeader.h"
 #include <string>
 
+
 class Wav {
 public:
     void readFile(const std::string &fileName);
@@ -19,8 +20,8 @@ public:
     virtual ~Wav();
 
 public:
-    unsigned char *getBuffer();
-    short *getShortBuffer();
+    unsigned char *getBuffer() ;
+    short *getShortBuffer() ;
     int getBufferSize() const;
 };
 #endif //WAV_H
