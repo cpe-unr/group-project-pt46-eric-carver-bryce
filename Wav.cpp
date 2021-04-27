@@ -37,3 +37,8 @@ Wav::~Wav() {
 int Wav::getBufferSize() const {
     return waveHeader.data_bytes;
 }
+
+void cast(Wav* wav) {
+	if(wav->waveHeader.num_channels == 2){
+	}
+}

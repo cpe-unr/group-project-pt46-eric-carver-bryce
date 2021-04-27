@@ -23,5 +23,7 @@ public:
     unsigned char *getBuffer() const;
     short *getShortBuffer() const;
     int getBufferSize() const;
+
+    void cast(Wav* wav);
 };
 #endif //WAV_H
