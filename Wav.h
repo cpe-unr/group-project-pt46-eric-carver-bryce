@@ -20,8 +20,8 @@ public:
     virtual ~Wav();
 
 public:
-    unsigned char *getBuffer() ;
-    short *getShortBuffer() ;
+    unsigned char *getBuffer() const;
+    short *getShortBuffer() const;
     int getBufferSize() const;
 };
 #endif //WAV_H

@@ -13,11 +13,11 @@ void Wav::readFile(const std::string &fileName) {
     }
 }
 
-unsigned char *Wav::getBuffer(){
+unsigned char *Wav::getBuffer() const{
     return buffer;
 }
 
-short *Wav::getShortBuffer(){
+short *Wav::getShortBuffer() const{
     short* shortBuffer = reinterpret_cast<short*>(buffer);
     return shortBuffer;
 }
