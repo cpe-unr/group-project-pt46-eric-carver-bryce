@@ -2,6 +2,8 @@
 #include <fstream>
 #include <iostream>
 #include "Wav.h"
+#include "8bitstereo.h"
+#include "16bitstereo.h"
 
 void Wav::readFile(const std::string &fileName) {
     std::ifstream file(fileName,std::ios::binary | std::ios::in);
@@ -38,7 +40,29 @@ int Wav::getBufferSize() const {
     return waveHeader.data_bytes;
 }
 
-void cast(Wav* wav) {
-	if(wav->waveHeader.num_channels == 2){
+wav_header Wav::getWaveHeader() const{
+	return waveHeader;
+}
+
+void Wav::cast(Wav* wav) {
+	wav_header header = wav->getWaveHeader();
+	if(header.num_channels == 2){
+		if(header.bit_depth == 8){
+			dynamic_cast<EightBitStereo*>(wav);
+		}
+
+		else if(header.bit_depth == 16){
+			dynamic_cast<SixteenBitStereo*>(wav);
+		}
+	}
+
+	else if(header.num_channels == 1){
+		if(header.bit_depth == 8){
+		//	dynamic_cast<EightBitMono*>(wav);
+		}
+
+		else if(header.bit_depth == 16){
+		//	dynamic_cast<SixteenBitMono*>(wav);
+		}
 	}
 }
