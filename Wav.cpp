@@ -6,12 +6,14 @@
 #include "16bitstereo.h"
 
 void Wav::readFile(const std::string &fileName) {
-    std::ifstream file(fileName,std::ios::binary | std::ios::in);
+    std::ifstream file;
+    file.open(fileName,std::ios::binary | std::ios::in);
     if(file.is_open()){
         file.read((char*)&waveHeader, sizeof(wav_header));
         buffer = new unsigned char[waveHeader.data_bytes];
         file.read((char*)buffer, waveHeader.data_bytes);
-        file.close();
+        file.close();	
+	std::cout << 1 << std::endl;
     }
 }
 
@@ -40,38 +42,38 @@ int Wav::getBufferSize() const {
     return waveHeader.data_bytes;
 }
 
-/*wav_header Wav::getWaveHeader() {
+wav_header Wav::getWaveHeader() {
 	return waveHeader;
-}*/
+}
 
-int Wav::getChannels() const{
+/*int Wav::getChannels() const{
 	return waveHeader.num_channels;
 }
 int Wav::getBitDepth() const{
 	return waveHeader.bit_depth;
 }
 
-Wav *Wav::cast(Wav* wav) {
+Wav *Wav::cast() {
 	
-	if(wav->getChannels() == 2){
-		if(wav->getBitDepth() == 8){
-			//Wav * newWave = new EightBitStereo(wav);
-			//return newWave;
+	if(waveHeader.num_channels == 2){
+		if(waveHeader.bit_depth == 8){
+			Wav * newWave = new EightBitStereo(wav);
+			return newWave;
 		}
 
-		else if(wav->getBitDepth() == 16){
-			//Wav * newWave = new SixteenBitStereo(wav);
-			//return newWave;
+		else if(waveHeader.bit_depth == 16){
+			Wav * newWave = new SixteenBitStereo(wav);
+			return newWave;
 		}
 	}
 
-	else if(wav->getChannels() == 1){
-		if(wav->getBitDepth() == 8){
+	else if(waveHeader.num_channels == 1){
+		if(waveHeader.bit_depth == 8){
 		
 		}
 
-		else if(wav->getBitDepth() == 16){
+		else if(waveHeader.bit_depth == 16){
 		
 		}
 	}
-}
+}*/

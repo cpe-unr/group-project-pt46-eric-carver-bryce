@@ -23,10 +23,10 @@ public:
     unsigned char *getBuffer() const;
     short *getShortBuffer() const;
     int getBufferSize() const;
-    //wav_header getWaveHeader();
+    wav_header getWaveHeader();
     int getChannels() const;
     int getBitDepth() const;
 
-    Wav *cast(Wav* wav);
+    Wav *cast();
 };
 #endif //WAV_H

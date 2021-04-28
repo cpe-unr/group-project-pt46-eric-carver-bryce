@@ -7,6 +7,7 @@ std::vector<std::string> Directory::getFileNames(const char* path){
 	DIR *dr;
 	dr = opendir(path);
 	std::vector<std::string> files;
+	std::string i = "audiofiles/";
 	
 	if(dr != NULL){
 		while((d = readdir(dr)) != NULL){
@@ -14,7 +15,7 @@ std::vector<std::string> Directory::getFileNames(const char* path){
 			if(!strcmp(d->d_name, ".") || !strcmp(d->d_name, "..")){
 			}
 			else{
-			files.push_back(d->d_name);
+			files.push_back(i + d->d_name);
 			}
 		}
 	}
