@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
 	for(int i=0; i < files.size(); i++){ 
 		Wav* wav;
 		wav->readFile(files[i]);
-		wav->cast(wav);
+		Wav* castedWav = wav->cast(wav);
 		wavObjects.push_back(wav); //Wav Objects that hold buffers and technical info in 							vector: wavObjects
 	}
 

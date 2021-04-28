@@ -8,7 +8,7 @@ void EightBitStereo::makeStereoBuffer(const EightBitStereo& wav){
 	}
 }	
 
-EightBitStereo::EightBitStereo(const EightBitStereo& wav){
+EightBitStereo::EightBitStereo(Wav* wav){
 	makeStereoBuffer(wav);
 }
 

@@ -40,29 +40,38 @@ int Wav::getBufferSize() const {
     return waveHeader.data_bytes;
 }
 
-wav_header Wav::getWaveHeader() const{
+/*wav_header Wav::getWaveHeader() {
 	return waveHeader;
+}*/
+
+int Wav::getChannels() const{
+	return waveHeader.num_channels;
+}
+int Wav::getBitDepth() const{
+	return waveHeader.bit_depth;
 }
 
-void Wav::cast(Wav* wav) {
-	wav_header header = wav->getWaveHeader();
-	if(header.num_channels == 2){
-		if(header.bit_depth == 8){
-			dynamic_cast<EightBitStereo*>(wav);
+Wav *Wav::cast(Wav* wav) {
+	
+	if(wav->getChannels() == 2){
+		if(wav->getBitDepth() == 8){
+			//Wav * newWave = new EightBitStereo(wav);
+			//return newWave;
 		}
 
-		else if(header.bit_depth == 16){
-			dynamic_cast<SixteenBitStereo*>(wav);
+		else if(wav->getBitDepth() == 16){
+			//Wav * newWave = new SixteenBitStereo(wav);
+			//return newWave;
 		}
 	}
 
-	else if(header.num_channels == 1){
-		if(header.bit_depth == 8){
-		//	dynamic_cast<EightBitMono*>(wav);
+	else if(wav->getChannels() == 1){
+		if(wav->getBitDepth() == 8){
+		
 		}
 
-		else if(header.bit_depth == 16){
-		//	dynamic_cast<SixteenBitMono*>(wav);
+		else if(wav->getBitDepth() == 16){
+		
 		}
 	}
 }

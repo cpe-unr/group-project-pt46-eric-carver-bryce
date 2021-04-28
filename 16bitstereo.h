@@ -8,7 +8,7 @@ private:
 	short *leftShortBuffer;
 	short *rightShortBuffer;
 public:
-	SixteenBitStereo(const SixteenBitStereo& wav);
+	SixteenBitStereo(Wav* wav);
 	void makeStereoBuffer(const SixteenBitStereo& wav);
 	short *getLeftShortBuffer();
 	short *getRightShortBuffer();
