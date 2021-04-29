@@ -8,7 +8,6 @@ private:
 	short *leftShortBuffer = NULL;
 	short *rightShortBuffer = NULL;
 public:
-	Wav *clone();
 	SixteenBitStereo(Wav* wav);
 	void makeStereoBuffer(Wav* wav);
 	short *getLeftShortBuffer();

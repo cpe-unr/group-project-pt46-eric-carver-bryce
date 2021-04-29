@@ -2,6 +2,8 @@
 #include <fstream>
 #include <iostream>
 #include "Wav.h"
+#include "16bitstereo.h"
+#include "8bitstereo.h"
 
 void Wav::readFile(const std::string &fileName) {
     std::ifstream file;
@@ -39,14 +41,14 @@ Wav::~Wav() {
 
 Wav *Wav::Create(const std::string &fileName){
 	Wav* wav = new Wav;
-	wav->readFile(filename);
+	wav->readFile(fileName);
 	if(wav->isStereo()){
 		if(wav->is16Bit()){
-			return new SixteenBitStereo;
+			return new SixteenBitStereo(wav);
 		}
 		
 		else{
-			return new EightBitStereo;
+			return new EightBitStereo(wav);
 		}
 	}	
 

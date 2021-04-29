@@ -25,10 +25,6 @@ SixteenBitStereo::SixteenBitStereo(Wav* wav){
 	makeStereoBuffer(wav);
 }
 
-Wav *SixteenBitStereo::clone(){
-	return new SixteenBitStereo(*this);
-}
-
 short *SixteenBitStereo::getLeftShortBuffer(){
 	return leftShortBuffer;
 }
