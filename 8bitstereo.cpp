@@ -24,8 +24,6 @@ EightBitStereo::EightBitStereo(Wav* wav){
 	//makeStereoBuffer(wav);
 }
 
-//EightBitStereo::EightBitStereo(const EightBitStereo& rhs): Wav(rhs), waveHeader(rhs.getWaveHeader()){}
-
 unsigned char *EightBitStereo::getLeftBuffer(){
 	return leftBuffer;
 }

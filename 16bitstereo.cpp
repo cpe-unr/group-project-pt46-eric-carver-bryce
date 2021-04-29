@@ -3,7 +3,7 @@
 
 void SixteenBitStereo::makeStereoBuffer(Wav* wav){
 	int i = 0;
-	short *shortBuffer = wav->getShortBuffer();
+	shortBuffer = wav->getShortBuffer();
 	rightShortBuffer = new short[(wav->getBufferSize())/2];
 	leftShortBuffer = new short[(wav->getBufferSize())/2];
 	std::cout << wav->getBufferSize() << std::endl;
@@ -25,9 +25,13 @@ SixteenBitStereo::SixteenBitStereo(Wav* wav){
 	makeStereoBuffer(wav);
 }
 
-short *SixteenBitStereo::getLeftShortBuffer(){
+short *SixteenBitStereo::getBuffer() const{
+    return shortBuffer;
+}
+
+short *SixteenBitStereo::getLeftBuffer(){
 	return leftShortBuffer;
 }
-short *SixteenBitStereo::getRightShortBuffer(){
+short *SixteenBitStereo::getRightBuffer(){
 	return rightShortBuffer;
 }
