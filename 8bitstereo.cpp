@@ -1,15 +1,32 @@
 #include "8bitstereo.h"
+#include <iostream>
 
-void EightBitStereo::makeStereoBuffer(const EightBitStereo& wav){
-	leftBuffer = wav.getBuffer();
-	for(int i = 0; i < wav.getBufferSize(); i++){
-		leftBuffer[i + 1] = rightBuffer[i];
-		leftBuffer[i + 2] = leftBuffer[i + 1];
+void EightBitStereo::makeStereoBuffer(Wav* wav){
+	int i = 0;
+	unsigned char *buffer = wav->getBuffer();
+	rightBuffer = new unsigned char[(wav->getBufferSize())/2];
+	leftBuffer = new unsigned char[(wav->getBufferSize())/2];
+	std::cout << wav->getBufferSize() << std::endl;
+	
+	for(int j = 0; j < (wav->getBufferSize() - 2); j += 2){
+		//std::cout << "short" << shortBuffer[i] << std::endl;
+		leftBuffer[i] = buffer[j];
+		//std::cout << "left" << leftShortBuffer[i] << std::endl;
+		rightBuffer[i] = buffer[j + 1];
+		//std::cout << "right" << rightShortBuffer[i] << std::endl;
+		//std::cout << "j" << j << std::endl;
+		//std::cout << "i" << i << std::endl;
+		i++;
 	}
 }	
 
 EightBitStereo::EightBitStereo(Wav* wav){
 	makeStereoBuffer(wav);
+	wav_header wavHeader = wav->getWaveHeader();
+}
+
+Wav *EightBitStereo::clone(){
+	return new EightBitStereo(*this);
 }
 
 unsigned char *EightBitStereo::getLeftBuffer(){

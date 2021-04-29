@@ -2,8 +2,6 @@
 #include <fstream>
 #include <iostream>
 #include "Wav.h"
-#include "8bitstereo.h"
-#include "16bitstereo.h"
 
 void Wav::readFile(const std::string &fileName) {
     std::ifstream file;
@@ -12,7 +10,8 @@ void Wav::readFile(const std::string &fileName) {
         file.read((char*)&waveHeader, sizeof(wav_header));
         buffer = new unsigned char[waveHeader.data_bytes];
         file.read((char*)buffer, waveHeader.data_bytes);
-        file.close();	
+        file.close();
+
 	std::cout << 1 << std::endl;
     }
 }
@@ -46,34 +45,28 @@ wav_header Wav::getWaveHeader() {
 	return waveHeader;
 }
 
-/*int Wav::getChannels() const{
-	return waveHeader.num_channels;
-}
-int Wav::getBitDepth() const{
-	return waveHeader.bit_depth;
-}
-
-Wav *Wav::cast() {
+void Wav::setWaveHeader(wav_header* header) {
 	
-	if(waveHeader.num_channels == 2){
-		if(waveHeader.bit_depth == 8){
-			Wav * newWave = new EightBitStereo(wav);
-			return newWave;
-		}
+}
 
-		else if(waveHeader.bit_depth == 16){
-			Wav * newWave = new SixteenBitStereo(wav);
-			return newWave;
-		}
+bool Wav::isStereo() {
+	if(waveHeader.num_channels == 2){
+		return true;
 	}
 
 	else if(waveHeader.num_channels == 1){
-		if(waveHeader.bit_depth == 8){
-		
-		}
-
-		else if(waveHeader.bit_depth == 16){
-		
-		}
+		return false;
 	}
-}*/
+}
+
+bool Wav::is16Bit() {
+	if(waveHeader.bit_depth == 16){
+		return true;
+	}
+
+	else if(waveHeader.bit_depth == 8){
+		return false;
+	}
+}
+
+

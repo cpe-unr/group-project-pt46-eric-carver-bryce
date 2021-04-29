@@ -1,15 +1,32 @@
 #include "16bitstereo.h"
+#include <iostream>
 
-void SixteenBitStereo::makeStereoBuffer(const SixteenBitStereo& wav){
-	leftShortBuffer = wav.getShortBuffer();
-	for(int i = 0; i < wav.getBufferSize(); i++){
-		leftShortBuffer[i + 1] = rightShortBuffer[i];
-		leftShortBuffer[i + 2] = leftShortBuffer[i + 1];
+void SixteenBitStereo::makeStereoBuffer(Wav* wav){
+	int i = 0;
+	short *shortBuffer = wav->getShortBuffer();
+	rightShortBuffer = new short[(wav->getBufferSize())/2];
+	leftShortBuffer = new short[(wav->getBufferSize())/2];
+	std::cout << wav->getBufferSize() << std::endl;
+	
+	for(int j = 0; j < (wav->getBufferSize() - 2); j += 2){
+		//std::cout << "short" << shortBuffer[i] << std::endl;
+		leftShortBuffer[i] = shortBuffer[j];
+		//std::cout << "left" << leftShortBuffer[i] << std::endl;
+		rightShortBuffer[i] = shortBuffer[j + 1];
+		//std::cout << "right" << rightShortBuffer[i] << std::endl;
+		//std::cout << "j" << j << std::endl;
+		//std::cout << "i" << i << std::endl;
+		i++;
 	}
 }	
 
 SixteenBitStereo::SixteenBitStereo(Wav* wav){
+	std::cout << "hey from constructor" << std::endl;
 	makeStereoBuffer(wav);
+}
+
+Wav *SixteenBitStereo::clone(){
+	return new SixteenBitStereo(*this);
 }
 
 short *SixteenBitStereo::getLeftShortBuffer(){

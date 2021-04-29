@@ -18,15 +18,16 @@ private:
     wav_header waveHeader;
 public:
     virtual ~Wav();
+    static Wav *Create(int channels, int bit_depth);
+    virtual Wav *Clone() = 0;
 
 public:
     unsigned char *getBuffer() const;
     short *getShortBuffer() const;
     int getBufferSize() const;
     wav_header getWaveHeader();
-    int getChannels() const;
-    int getBitDepth() const;
-
-    Wav *cast();
+    void setWaveHeader(wav_header* header);
+    bool isStereo();
+    bool is16Bit();
 };
 #endif //WAV_H

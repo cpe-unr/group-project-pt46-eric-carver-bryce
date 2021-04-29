@@ -8,8 +8,9 @@ private:
 	unsigned char *leftBuffer;
 	unsigned char *rightBuffer;
 public:
+	Wav *clone();
 	EightBitStereo(Wav* wav);
-	void makeStereoBuffer(const EightBitStereo& wav);
+	void makeStereoBuffer(Wav* wav);
 	unsigned char *getLeftBuffer();
 	unsigned char *getRightBuffer();
 };

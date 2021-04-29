@@ -5,11 +5,12 @@
 
 class SixteenBitStereo: public Wav {
 private:
-	short *leftShortBuffer;
-	short *rightShortBuffer;
+	short *leftShortBuffer = NULL;
+	short *rightShortBuffer = NULL;
 public:
+	Wav *clone();
 	SixteenBitStereo(Wav* wav);
-	void makeStereoBuffer(const SixteenBitStereo& wav);
+	void makeStereoBuffer(Wav* wav);
 	short *getLeftShortBuffer();
 	short *getRightShortBuffer();
 };
