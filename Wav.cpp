@@ -37,6 +37,30 @@ Wav::~Wav() {
         delete[] buffer;
 }
 
+Wav *Wav::Create(const std::string &fileName){
+	Wav* wav = new Wav;
+	wav->readFile(filename);
+	if(wav->isStereo()){
+		if(wav->is16Bit()){
+			return new SixteenBitStereo;
+		}
+		
+		else{
+			return new EightBitStereo;
+		}
+	}	
+
+	else{
+		if(wav->is16Bit()){
+			//return new SixteenBitMono;
+		}
+		
+		else{
+			//return new EightBitMono;
+		}
+	}
+}
+
 int Wav::getBufferSize() const {
     return waveHeader.data_bytes;
 }

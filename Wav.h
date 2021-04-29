@@ -18,8 +18,7 @@ private:
     wav_header waveHeader;
 public:
     virtual ~Wav();
-    static Wav *Create(int channels, int bit_depth);
-    virtual Wav *Clone() = 0;
+    static Wav *Create(const std::string &fileName);
 
 public:
     unsigned char *getBuffer() const;

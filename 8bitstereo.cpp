@@ -21,13 +21,10 @@ void EightBitStereo::makeStereoBuffer(Wav* wav){
 }	
 
 EightBitStereo::EightBitStereo(Wav* wav){
-	makeStereoBuffer(wav);
-	wav_header wavHeader = wav->getWaveHeader();
+	//makeStereoBuffer(wav);
 }
 
-Wav *EightBitStereo::clone(){
-	return new EightBitStereo(*this);
-}
+EightBitStereo::EightBitStereo(const EightBitStereo& rhs): Wav(rhs), waveHeader(rhs.getWaveHeader()){}
 
 unsigned char *EightBitStereo::getLeftBuffer(){
 	return leftBuffer;
