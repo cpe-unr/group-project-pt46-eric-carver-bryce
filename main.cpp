@@ -57,5 +57,5 @@ int main(int argc, char* argv[]) {
 		std::cout << files[i] << std::endl;
 	}
 
-	return 0;
+	return 0;;
 }
