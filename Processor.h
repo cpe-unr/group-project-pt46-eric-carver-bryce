@@ -9,23 +9,23 @@ private:
 	C* wav;
 public:
 	Processor(C* wavObject){wav = wavObject;}
-	EchoSeconds(float seconds){
+	void EchoSeconds(float seconds, float scaleFactor){
 		if (wav->isStereo()){
-			EchoInSeconds(wav->getLeftBuffer(), wav->getBufferSize(), seconds, wav->getWaveHeader().sample_rate);
-			EchoInSeconds(wav->getRightBuffer(), wav->getBufferSize(), seconds, wav->getWaveHeader().sample_rate);
+			EchoInSeconds(wav->getLeftBuffer(), wav->getBufferSize(), seconds, scaleFactor, wav->getWaveHeader().sample_rate);
+			EchoInSeconds(wav->getRightBuffer(), wav->getBufferSize(), seconds, scaleFactor, wav->getWaveHeader().sample_rate);
 		}else{
-			EchoInSeconds(wav->getBuffer(), wav->getBufferSize(), seconds, wav->getWaveHeader().sample_rate);
+			EchoInSeconds(wav->getBuffer(), wav->getBufferSize(), seconds, scaleFactor, wav->getWaveHeader().sample_rate);
 		}
 	}
-	EchoFrames(int frames){
+	void EchoFrames(int frames, float scaleFactor){
 		if (wav->isStereo()){
-			EchoInFrames(wav->getLeftBuffer(), wav->getBufferSize(), frames);
-			EchoInFrames(wav->getRightBuffer(), wav->getBufferSize(), frames);
+			EchoInFrames(wav->getLeftBuffer(), wav->getBufferSize(), frames, scaleFactor);
+			EchoInFrames(wav->getRightBuffer(), wav->getBufferSize(), frames, scaleFactor);
 		}else{
-			EchoInFrames(wav->getBuffer(), wav->getBufferSize(), frames);
+			EchoInFrames(wav->getBuffer(), wav->getBufferSize(), frames, scaleFactor);
 		}
 	}
-	NormalizeDecibels(float decibels){
+	void NormalizeDecibels(float decibels){
 		if (wav->isStereo()){
 			NormalizationInDB(wav->getLeftBuffer(), wav->getBufferSize(), decibels);
 			NormalizationInDB(wav->getRightBuffer(), wav->getBufferSize(), decibels);
@@ -33,7 +33,7 @@ public:
 			NormalizationInDB(wav->getBuffer(), wav->getBufferSize(), decibels);
 		}
 	}
-	NormalizePercent(float percent){
+	void NormalizePercent(float percent){
 		if (wav->isStereo()){
 			NormalizationByPercent(wav->getLeftBuffer(), wav->getBufferSize(), percent/100);
 			NormalizationByPercent(wav->getRightBuffer(), wav->getBufferSize(), percent/100);
@@ -41,7 +41,7 @@ public:
 			NormalizationByPercent(wav->getBuffer(), wav->getBufferSize(), percent/100);
 		}
 	}
-	NormalizeFraction(float fraction){
+	void NormalizeFraction(float fraction){
 		if (wav->isStereo()){
 			NormalizationByPercent(wav->getLeftBuffer(), wav->getBufferSize(), fraction);
 			NormalizationByPercent(wav->getRightBuffer(), wav->getBufferSize(), fraction);

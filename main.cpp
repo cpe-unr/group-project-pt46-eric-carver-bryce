@@ -39,7 +39,7 @@ void fn(){
 int main(int argc, char* argv[]) {
 	
 	if(argc != 2){
-		std::cout << "Correct Usage: ./audioprocessor audiofiles" <<std::endl;
+		std::cout << "Correct Usage: " << argv[0] << " audiofiles" <<std::endl;
 		return 0;
 	}
 
