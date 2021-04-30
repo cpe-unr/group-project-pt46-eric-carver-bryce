@@ -4,6 +4,8 @@
 #include "Wav.h"
 #include "16bitstereo.h"
 #include "8bitstereo.h"
+#include "16bitmono.h"
+#include "8bitmono.h"
 
 void Wav::readFile(const std::string &fileName) {
     std::ifstream file;
@@ -40,10 +42,10 @@ Wav::~Wav() {
 }
 
 Wav *Wav::Create(const std::string &fileName){
-	Wav* wav = new Wav;
-	wav->readFile(fileName);
-	if(wav->isStereo()){
-		if(wav->is16Bit()){
+	Wav wav;
+	wav.readFile(fileName);
+	if(wav.isStereo()){
+		if(wav.is16Bit()){
 			return new SixteenBitStereo(wav);
 		}
 		
@@ -53,14 +55,15 @@ Wav *Wav::Create(const std::string &fileName){
 	}	
 
 	else{
-		if(wav->is16Bit()){
-			//return new SixteenBitMono;
+		if(wav.is16Bit()){
+			return new SixteenBitMono(wav);
 		}
 		
 		else{
-			//return new EightBitMono;
+			return new EightBitMono(wav);
 		}
 	}
+	//wav.~Wav();
 }
 
 int Wav::getBufferSize() const {
@@ -71,8 +74,14 @@ wav_header Wav::getWaveHeader() {
 	return waveHeader;
 }
 
-void Wav::setWaveHeader(wav_header* header) {
-	
+Wav::Wav(){}
+
+Wav::Wav(const Wav& rhs){
+	std::cout << "hey 1" << std::endl;
+	waveHeader = rhs.waveHeader;
+	std::cout << "hey 2" << std::endl;
+	buffer = rhs.buffer;
+	std::cout << "hey 3" << std::endl;
 }
 
 bool Wav::isStereo() {

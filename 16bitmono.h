@@ -6,6 +6,7 @@
 class SixteenBitMono: public Wav{
 public:
 	short *getBuffer() const;
+	SixteenBitMono(const Wav& wav);
 
 };
 #endif

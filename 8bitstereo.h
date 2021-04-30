@@ -8,9 +8,9 @@ private:
 	unsigned char *leftBuffer;
 	unsigned char *rightBuffer;
 public:
-	EightBitStereo(Wav* wav);
+	EightBitStereo(const Wav& wav);
 	//EightBitStereo(const EightBitStereo& rhs);
-	void makeStereoBuffer(Wav* wav);
+	void makeStereoBuffer(const Wav& wav);
 	unsigned char *getLeftBuffer();
 	unsigned char *getRightBuffer();
 };

@@ -1,9 +1,13 @@
-#ifndef 8BITMONO_H
-#define 8BITMONO_H
+#ifndef EIGHTBITMONO_H
+#define EIGHTBITMONO_H
 
 #include "Wav.h"
 
-class 8BitMono: public Wav{
+class EightBitMono: public Wav{
+public:
+	//void writeFile(const std::string &outFileName) override;
+	EightBitMono(const Wav& wav);
 
-}
+
+};
 #endif

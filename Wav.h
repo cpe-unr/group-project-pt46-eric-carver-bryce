@@ -12,12 +12,14 @@
 class Wav {
 public:
     void readFile(const std::string &fileName);
-    void writeFile(const std::string &outFileName);
+    virtual void writeFile(const std::string &outFileName);
 private:
     unsigned char* buffer = NULL;
     wav_header waveHeader;
 public:
     virtual ~Wav();
+    Wav();
+    Wav(const Wav& rhs);
     static Wav *Create(const std::string &fileName);
 
 public:
