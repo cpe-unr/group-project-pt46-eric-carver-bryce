@@ -2,9 +2,10 @@
 #define PROCESSOR_H
 #include "Echo.h"
 #include "Normalization.h"
+#include "NoiseGate.h"
 
 template <class C>
-class Processor: public Echo, public Normalization{
+class Processor: public Echo, public Normalization, public NoiseGate{
 private:
 	C* wav;
 public:
@@ -35,10 +36,10 @@ public:
 	}
 	void NormalizePercent(float percent){
 		if (wav->isStereo()){
-			NormalizationByPercent(wav->getLeftBuffer(), wav->getBufferSize(), percent/100);
-			NormalizationByPercent(wav->getRightBuffer(), wav->getBufferSize(), percent/100);
+			NormalizationByPercent(wav->getLeftBuffer(), wav->getBufferSize(), percent/100.0);
+			NormalizationByPercent(wav->getRightBuffer(), wav->getBufferSize(), percent/100.0);
 		}else{
-			NormalizationByPercent(wav->getBuffer(), wav->getBufferSize(), percent/100);
+			NormalizationByPercent(wav->getBuffer(), wav->getBufferSize(), percent/100.0);
 		}
 	}
 	void NormalizeFraction(float fraction){
@@ -47,6 +48,30 @@ public:
 			NormalizationByPercent(wav->getRightBuffer(), wav->getBufferSize(), fraction);
 		}else{
 			NormalizationByPercent(wav->getBuffer(), wav->getBufferSize(), fraction);
+		}
+	}
+	void NoiseGateLevel(int level){
+		if (wav->isStereo()){
+			NoiseGateByFlat(wav->getLeftBuffer(), wav->getBufferSize(), level);
+			NoiseGateByFlat(wav->getRightBuffer(), wav->getBufferSize(), level);
+		}else{
+			NoiseGateByFlat(wav->getBuffer(), wav->getBufferSize(), level);
+		}
+	}
+	void NoiseGatePercent(float percent){
+		if (wav->isStereo()){
+			NoiseGateByPercent(wav->getLeftBuffer(), wav->getBufferSize(), percent/100.0);
+			NoiseGateByPercent(wav->getRightBuffer(), wav->getBufferSize(), percent/100.0);
+		}else{
+			NoiseGateByPercent(wav->getBuffer(), wav->getBufferSize(), percent/100.0);
+		}
+	}
+	void NoiseGateFraction(float fraction){
+		if (wav->isStereo()){
+			NoiseGateByPercent(wav->getLeftBuffer(), wav->getBufferSize(), fraction);
+			NoiseGateByPercent(wav->getRightBuffer(), wav->getBufferSize(), fraction);
+		}else{
+			NoiseGateByPercent(wav->getBuffer(), wav->getBufferSize(), fraction);
 		}
 	}
 };
