@@ -1,0 +1,106 @@
+\hypertarget{classEcho}{}\section{Echo Class Reference}
+\label{classEcho}\index{Echo@{Echo}}
+
+
+Inheritance diagram for Echo\+:
+% FIG 0
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classEcho_ac33fbb5ee26f0b39b76657def1eec631}{Echo\+In\+Seconds} (unsigned char $\ast$buffer, int buffer\+Size, float delay\+In\+Seconds, float scale\+Factor, int frame\+Rate)
+\item 
+void \hyperlink{classEcho_a3e3b5040afb0ea01c72d3dbd7f49a879}{Echo\+In\+Seconds} (short $\ast$buffer, int buffer\+Size, float delay\+In\+Seconds, float scale\+Factor, int frame\+Rate)
+\item 
+void \hyperlink{classEcho_ab184be947177fcf79cac7b1faf959f3f}{Echo\+In\+Frames} (unsigned char $\ast$buffer, int buffer\+Size, int delay\+In\+Frames, float scale\+Factor)
+\item 
+void \hyperlink{classEcho_af96c36f5ed41c06cca8a7147c43c7000}{Echo\+In\+Frames} (short $\ast$buffer, int buffer\+Size, int delay\+In\+Frames, float scale\+Factor)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEcho_ab184be947177fcf79cac7b1faf959f3f}\label{classEcho_ab184be947177fcf79cac7b1faf959f3f}} 
+\index{Echo@{Echo}!Echo\+In\+Frames@{Echo\+In\+Frames}}
+\index{Echo\+In\+Frames@{Echo\+In\+Frames}!Echo@{Echo}}
+\subsubsection{\texorpdfstring{Echo\+In\+Frames()}{EchoInFrames()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Echo\+::\+Echo\+In\+Frames (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{int}]{delay\+In\+Frames,  }\item[{float}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds an echo on 8-\/bit buffer, specified in frames
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Delay} & (in frames) of the echo \\
+\hline
+{\em Scale} & factor of the echo (between 0 and 1) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEcho_af96c36f5ed41c06cca8a7147c43c7000}\label{classEcho_af96c36f5ed41c06cca8a7147c43c7000}} 
+\index{Echo@{Echo}!Echo\+In\+Frames@{Echo\+In\+Frames}}
+\index{Echo\+In\+Frames@{Echo\+In\+Frames}!Echo@{Echo}}
+\subsubsection{\texorpdfstring{Echo\+In\+Frames()}{EchoInFrames()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Echo\+::\+Echo\+In\+Frames (\begin{DoxyParamCaption}\item[{short $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{int}]{delay\+In\+Frames,  }\item[{float}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds an echo on 16-\/bit buffer, specified in frames
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Delay} & (in frames) of the echo \\
+\hline
+{\em Scale} & factor of the echo (between 0 and 1) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEcho_ac33fbb5ee26f0b39b76657def1eec631}\label{classEcho_ac33fbb5ee26f0b39b76657def1eec631}} 
+\index{Echo@{Echo}!Echo\+In\+Seconds@{Echo\+In\+Seconds}}
+\index{Echo\+In\+Seconds@{Echo\+In\+Seconds}!Echo@{Echo}}
+\subsubsection{\texorpdfstring{Echo\+In\+Seconds()}{EchoInSeconds()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Echo\+::\+Echo\+In\+Seconds (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{float}]{delay\+In\+Seconds,  }\item[{float}]{scale\+Factor,  }\item[{int}]{frame\+Rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds an echo on 8-\/bit buffer, specified in seconds
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Delay} & (in seconds) of the echo \\
+\hline
+{\em Scale} & factor of the echo (between 0 and 1) \\
+\hline
+{\em Frame} & rate (frames/second) of the data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEcho_a3e3b5040afb0ea01c72d3dbd7f49a879}\label{classEcho_a3e3b5040afb0ea01c72d3dbd7f49a879}} 
+\index{Echo@{Echo}!Echo\+In\+Seconds@{Echo\+In\+Seconds}}
+\index{Echo\+In\+Seconds@{Echo\+In\+Seconds}!Echo@{Echo}}
+\subsubsection{\texorpdfstring{Echo\+In\+Seconds()}{EchoInSeconds()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Echo\+::\+Echo\+In\+Seconds (\begin{DoxyParamCaption}\item[{short $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{float}]{delay\+In\+Seconds,  }\item[{float}]{scale\+Factor,  }\item[{int}]{frame\+Rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Adds an echo on 16-\/bit buffer, specified in seconds
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Delay} & (in seconds) of the echo \\
+\hline
+{\em Scale} & factor of the echo (between 0 and 1) \\
+\hline
+{\em Frame} & rate (frames/second) of the data \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Echo.\+h\item 
+Echo.\+cpp\end{DoxyCompactItemize}

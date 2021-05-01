@@ -1,0 +1,176 @@
+\hypertarget{classProcessor}{}\section{Processor$<$ C $>$ Class Template Reference}
+\label{classProcessor}\index{Processor$<$ C $>$@{Processor$<$ C $>$}}
+
+
+Inheritance diagram for Processor$<$ C $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Processor$<$ C $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classProcessor_ac27e9474257b55661fa221497f1f82fb}{Processor} (C $\ast$wav\+Object)
+\item 
+void \hyperlink{classProcessor_a78eddf7400dbb916dd1a2f86604c61c8}{Echo\+Seconds} (float seconds, float scale\+Factor)
+\item 
+void \hyperlink{classProcessor_a351348e5bea46d7b01f2678f638918de}{Echo\+Frames} (int frames, float scale\+Factor)
+\item 
+void \hyperlink{classProcessor_a1125ca6169f0d51516c9479e275d7caa}{Normalize\+Decibels} (float decibels)
+\item 
+void \hyperlink{classProcessor_a1f5e551c8a57d91bbc1b8f69ab51e590}{Normalize\+Percent} (float percent)
+\item 
+void \hyperlink{classProcessor_accb48e4f7a49d5804dac5438896a5b92}{Normalize\+Fraction} (float fraction)
+\item 
+void \hyperlink{classProcessor_a21406185912e85d6d43657257c4095c0}{Noise\+Gate\+Level} (int level)
+\item 
+void \hyperlink{classProcessor_a357a5600fe3ecdfe1b9da4cc2afc6cf1}{Noise\+Gate\+Percent} (float percent)
+\item 
+void \hyperlink{classProcessor_a8762bfcd807bfd8242e8398e0541508c}{Noise\+Gate\+Fraction} (float fraction)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classProcessor_ac27e9474257b55661fa221497f1f82fb}\label{classProcessor_ac27e9474257b55661fa221497f1f82fb}} 
+\index{Processor@{Processor}!Processor@{Processor}}
+\index{Processor@{Processor}!Processor@{Processor}}
+\subsubsection{\texorpdfstring{Processor()}{Processor()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\hyperlink{classProcessor}{Processor}$<$ C $>$\+::\hyperlink{classProcessor}{Processor} (\begin{DoxyParamCaption}\item[{C $\ast$}]{wav\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for the \hyperlink{classProcessor}{Processor} class
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to the \hyperlink{classWav}{Wav} Object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classProcessor}{Processor} Object 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classProcessor_a351348e5bea46d7b01f2678f638918de}\label{classProcessor_a351348e5bea46d7b01f2678f638918de}} 
+\index{Processor@{Processor}!Echo\+Frames@{Echo\+Frames}}
+\index{Echo\+Frames@{Echo\+Frames}!Processor@{Processor}}
+\subsubsection{\texorpdfstring{Echo\+Frames()}{EchoFrames()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \hyperlink{classProcessor}{Processor}$<$ C $>$\+::Echo\+Frames (\begin{DoxyParamCaption}\item[{int}]{frames,  }\item[{float}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Applies an echo to the buffer, specified in frames
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delay} & in frames \\
+\hline
+{\em Factor} & to scale the echo (between 0 and 1) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classProcessor_a78eddf7400dbb916dd1a2f86604c61c8}\label{classProcessor_a78eddf7400dbb916dd1a2f86604c61c8}} 
+\index{Processor@{Processor}!Echo\+Seconds@{Echo\+Seconds}}
+\index{Echo\+Seconds@{Echo\+Seconds}!Processor@{Processor}}
+\subsubsection{\texorpdfstring{Echo\+Seconds()}{EchoSeconds()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \hyperlink{classProcessor}{Processor}$<$ C $>$\+::Echo\+Seconds (\begin{DoxyParamCaption}\item[{float}]{seconds,  }\item[{float}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Applies an echo to the buffer, specified in seconds
+
+
+\begin{DoxyParams}{Parameters}
+{\em Delay} & in seconds \\
+\hline
+{\em Factor} & to scale the echo (between 0 and 1) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classProcessor_a8762bfcd807bfd8242e8398e0541508c}\label{classProcessor_a8762bfcd807bfd8242e8398e0541508c}} 
+\index{Processor@{Processor}!Noise\+Gate\+Fraction@{Noise\+Gate\+Fraction}}
+\index{Noise\+Gate\+Fraction@{Noise\+Gate\+Fraction}!Processor@{Processor}}
+\subsubsection{\texorpdfstring{Noise\+Gate\+Fraction()}{NoiseGateFraction()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \hyperlink{classProcessor}{Processor}$<$ C $>$\+::Noise\+Gate\+Fraction (\begin{DoxyParamCaption}\item[{float}]{fraction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Applies noise gate to the buffer, specified by decimal
+
+
+\begin{DoxyParams}{Parameters}
+{\em Decimal} & of maximum to apply noise gate when below \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classProcessor_a21406185912e85d6d43657257c4095c0}\label{classProcessor_a21406185912e85d6d43657257c4095c0}} 
+\index{Processor@{Processor}!Noise\+Gate\+Level@{Noise\+Gate\+Level}}
+\index{Noise\+Gate\+Level@{Noise\+Gate\+Level}!Processor@{Processor}}
+\subsubsection{\texorpdfstring{Noise\+Gate\+Level()}{NoiseGateLevel()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \hyperlink{classProcessor}{Processor}$<$ C $>$\+::Noise\+Gate\+Level (\begin{DoxyParamCaption}\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Applies noise gate to the buffer, specified by mininum level
+
+
+\begin{DoxyParams}{Parameters}
+{\em Integer} & to apply noise gate when below \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classProcessor_a357a5600fe3ecdfe1b9da4cc2afc6cf1}\label{classProcessor_a357a5600fe3ecdfe1b9da4cc2afc6cf1}} 
+\index{Processor@{Processor}!Noise\+Gate\+Percent@{Noise\+Gate\+Percent}}
+\index{Noise\+Gate\+Percent@{Noise\+Gate\+Percent}!Processor@{Processor}}
+\subsubsection{\texorpdfstring{Noise\+Gate\+Percent()}{NoiseGatePercent()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \hyperlink{classProcessor}{Processor}$<$ C $>$\+::Noise\+Gate\+Percent (\begin{DoxyParamCaption}\item[{float}]{percent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Applies noise gate to the buffer, specified by percent
+
+
+\begin{DoxyParams}{Parameters}
+{\em Percent} & of maximum to apply noise gate when below \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classProcessor_a1125ca6169f0d51516c9479e275d7caa}\label{classProcessor_a1125ca6169f0d51516c9479e275d7caa}} 
+\index{Processor@{Processor}!Normalize\+Decibels@{Normalize\+Decibels}}
+\index{Normalize\+Decibels@{Normalize\+Decibels}!Processor@{Processor}}
+\subsubsection{\texorpdfstring{Normalize\+Decibels()}{NormalizeDecibels()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \hyperlink{classProcessor}{Processor}$<$ C $>$\+::Normalize\+Decibels (\begin{DoxyParamCaption}\item[{float}]{decibels }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Applies normalization to the buffer, specified in decibels from maximum
+
+
+\begin{DoxyParams}{Parameters}
+{\em Number} & of decibels from max to normalize the peak to (should be negative) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classProcessor_accb48e4f7a49d5804dac5438896a5b92}\label{classProcessor_accb48e4f7a49d5804dac5438896a5b92}} 
+\index{Processor@{Processor}!Normalize\+Fraction@{Normalize\+Fraction}}
+\index{Normalize\+Fraction@{Normalize\+Fraction}!Processor@{Processor}}
+\subsubsection{\texorpdfstring{Normalize\+Fraction()}{NormalizeFraction()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \hyperlink{classProcessor}{Processor}$<$ C $>$\+::Normalize\+Fraction (\begin{DoxyParamCaption}\item[{float}]{fraction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Applies normalization to the buffer, specified by decimal of maximum
+
+
+\begin{DoxyParams}{Parameters}
+{\em Decimal} & of max to normalize the peak to (should be negative) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classProcessor_a1f5e551c8a57d91bbc1b8f69ab51e590}\label{classProcessor_a1f5e551c8a57d91bbc1b8f69ab51e590}} 
+\index{Processor@{Processor}!Normalize\+Percent@{Normalize\+Percent}}
+\index{Normalize\+Percent@{Normalize\+Percent}!Processor@{Processor}}
+\subsubsection{\texorpdfstring{Normalize\+Percent()}{NormalizePercent()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \hyperlink{classProcessor}{Processor}$<$ C $>$\+::Normalize\+Percent (\begin{DoxyParamCaption}\item[{float}]{percent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Applies normalization to the buffer, specified in percent of maximum
+
+
+\begin{DoxyParams}{Parameters}
+{\em Percent} & of max to normalize the peak to (should be negative) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Processor.\+h\end{DoxyCompactItemize}

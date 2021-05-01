@@ -1,0 +1,70 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}Wav.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}directory.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Processor.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_ad9d0e397081801b3c81f84aef014b9ca}{fn} ()
+\begin{DoxyCompactList}\small\item\em The function bar. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_ab0c662563f1b6bd6595f84738e9a5df3}\label{main_8cpp_ab0c662563f1b6bd6595f84738e9a5df3}} 
+const std\+::string {\bfseries eightbitmono} = \char`\"{}yes-\/8bit-\/mono.\+wav\char`\"{}
+\item 
+\mbox{\Hypertarget{main_8cpp_a6f495c6b3c2031c101828320177654d0}\label{main_8cpp_a6f495c6b3c2031c101828320177654d0}} 
+const std\+::string {\bfseries eightbitstereo} = \char`\"{}yes-\/8-\/bit-\/stereo.\+wav\char`\"{}
+\item 
+\mbox{\Hypertarget{main_8cpp_adf3ce22f2f1b3188b310c525893feac0}\label{main_8cpp_adf3ce22f2f1b3188b310c525893feac0}} 
+const std\+::string {\bfseries sixteenbitmono} = \char`\"{}yes-\/16-\/bit-\/mono.\+wav\char`\"{}
+\item 
+\mbox{\Hypertarget{main_8cpp_ac81c597db91ef4de294c45abe9021127}\label{main_8cpp_ac81c597db91ef4de294c45abe9021127}} 
+const std\+::string {\bfseries sixteenbitstereo} = \char`\"{}yes-\/26-\/bit-\/stereo.\+wav\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ad9d0e397081801b3c81f84aef014b9ca}\label{main_8cpp_ad9d0e397081801b3c81f84aef014b9ca}} 
+\index{main.\+cpp@{main.\+cpp}!fn@{fn}}
+\index{fn@{fn}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{fn()}{fn()}}
+{\footnotesize\ttfamily void fn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function bar. 
+
+This function does something which is doing nothing. So this text is totally senseless and you really do not need to read this, because this text is basically saying nothing.
+
+\begin{DoxyNote}{Note}
+This text shall only show you, how such a "note" section is looking. There is nothing which really needs your notice, so you do not really need to read this section.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a} & Description of parameter a. \\
+\hline
+\mbox{\tt out}  & {\em b} & Description of the parameter b. \\
+\hline
+\mbox{\tt in,out}  & {\em c} & Description of the parameter c.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The error return code of the function.
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em E\+R\+R\+\_\+\+S\+U\+C\+C\+E\+SS} & The function is successfully executed \\
+\hline
+{\em E\+R\+R\+\_\+\+F\+A\+I\+L\+U\+RE} & An error occurred \\
+\hline
+\end{DoxyRetVals}

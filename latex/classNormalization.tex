@@ -1,0 +1,94 @@
+\hypertarget{classNormalization}{}\section{Normalization Class Reference}
+\label{classNormalization}\index{Normalization@{Normalization}}
+
+
+Inheritance diagram for Normalization\+:
+% FIG 0
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classNormalization_a02e3d80b3fa7cc01adc3c61f6de5129d}{Normalization\+By\+Percent} (unsigned char $\ast$buffer, int buffer\+Size, float scale\+Factor)
+\item 
+void \hyperlink{classNormalization_a430334e17df25fd1f20e4e13afbdab91}{Normalization\+By\+Percent} (short $\ast$buffer, int buffer\+Size, float scale\+Factor)
+\item 
+void \hyperlink{classNormalization_a14ea077bd0e938357d2a380e219ace20}{Normalization\+In\+DB} (unsigned char $\ast$buffer, int buffer\+Size, float db)
+\item 
+void \hyperlink{classNormalization_a370489c18a604198120445f01c468d10}{Normalization\+In\+DB} (short $\ast$buffer, int buffer\+Size, float db)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNormalization_a02e3d80b3fa7cc01adc3c61f6de5129d}\label{classNormalization_a02e3d80b3fa7cc01adc3c61f6de5129d}} 
+\index{Normalization@{Normalization}!Normalization\+By\+Percent@{Normalization\+By\+Percent}}
+\index{Normalization\+By\+Percent@{Normalization\+By\+Percent}!Normalization@{Normalization}}
+\subsubsection{\texorpdfstring{Normalization\+By\+Percent()}{NormalizationByPercent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Normalization\+::\+Normalization\+By\+Percent (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{float}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Normalizes 8-\/bit buffer, specified as a fraction
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Scale} & factor of the normalization (between 0 and 1) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNormalization_a430334e17df25fd1f20e4e13afbdab91}\label{classNormalization_a430334e17df25fd1f20e4e13afbdab91}} 
+\index{Normalization@{Normalization}!Normalization\+By\+Percent@{Normalization\+By\+Percent}}
+\index{Normalization\+By\+Percent@{Normalization\+By\+Percent}!Normalization@{Normalization}}
+\subsubsection{\texorpdfstring{Normalization\+By\+Percent()}{NormalizationByPercent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Normalization\+::\+Normalization\+By\+Percent (\begin{DoxyParamCaption}\item[{short $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{float}]{scale\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Normalizes 16-\/bit buffer, specified as a fraction
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Scale} & factor of the normalization (between 0 and 1) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNormalization_a14ea077bd0e938357d2a380e219ace20}\label{classNormalization_a14ea077bd0e938357d2a380e219ace20}} 
+\index{Normalization@{Normalization}!Normalization\+In\+DB@{Normalization\+In\+DB}}
+\index{Normalization\+In\+DB@{Normalization\+In\+DB}!Normalization@{Normalization}}
+\subsubsection{\texorpdfstring{Normalization\+In\+D\+B()}{NormalizationInDB()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Normalization\+::\+Normalization\+In\+DB (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{float}]{db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Normalizes 8-\/bit buffer, specified in decibels
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Decibels} & below maximum (should be at most 0) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNormalization_a370489c18a604198120445f01c468d10}\label{classNormalization_a370489c18a604198120445f01c468d10}} 
+\index{Normalization@{Normalization}!Normalization\+In\+DB@{Normalization\+In\+DB}}
+\index{Normalization\+In\+DB@{Normalization\+In\+DB}!Normalization@{Normalization}}
+\subsubsection{\texorpdfstring{Normalization\+In\+D\+B()}{NormalizationInDB()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Normalization\+::\+Normalization\+In\+DB (\begin{DoxyParamCaption}\item[{short $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{float}]{db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Normalizes 16-\/bit buffer, specified in decibels
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Decibels} & below maximum (should be at most 0) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Normalization.\+h\item 
+Normalization.\+cpp\end{DoxyCompactItemize}

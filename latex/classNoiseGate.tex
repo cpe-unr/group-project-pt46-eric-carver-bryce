@@ -1,0 +1,94 @@
+\hypertarget{classNoiseGate}{}\section{Noise\+Gate Class Reference}
+\label{classNoiseGate}\index{Noise\+Gate@{Noise\+Gate}}
+
+
+Inheritance diagram for Noise\+Gate\+:
+% FIG 0
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classNoiseGate_a9129f03e1f6ee5ea3f893e5ad554e036}{Noise\+Gate\+By\+Percent} (unsigned char $\ast$buffer, int buffer\+Size, float cutoff\+Fraction)
+\item 
+void \hyperlink{classNoiseGate_a8ca4b8f8894725e85023bb791251b2c1}{Noise\+Gate\+By\+Percent} (short $\ast$buffer, int buffer\+Size, float cutoff\+Fraction)
+\item 
+void \hyperlink{classNoiseGate_a19bc105849e1d1c374e5fd1d0c2b716b}{Noise\+Gate\+By\+Flat} (unsigned char $\ast$buffer, int buffer\+Size, int cutoff)
+\item 
+void \hyperlink{classNoiseGate_a0d33dba5ca22b83898d3c7b8148ef439}{Noise\+Gate\+By\+Flat} (short $\ast$buffer, int buffer\+Size, int cutoff)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNoiseGate_a19bc105849e1d1c374e5fd1d0c2b716b}\label{classNoiseGate_a19bc105849e1d1c374e5fd1d0c2b716b}} 
+\index{Noise\+Gate@{Noise\+Gate}!Noise\+Gate\+By\+Flat@{Noise\+Gate\+By\+Flat}}
+\index{Noise\+Gate\+By\+Flat@{Noise\+Gate\+By\+Flat}!Noise\+Gate@{Noise\+Gate}}
+\subsubsection{\texorpdfstring{Noise\+Gate\+By\+Flat()}{NoiseGateByFlat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Noise\+Gate\+::\+Noise\+Gate\+By\+Flat (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{int}]{cutoff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Applies Noise Gate to 8-\/bit buffer, specified by value
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Max} & signal level to gate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNoiseGate_a0d33dba5ca22b83898d3c7b8148ef439}\label{classNoiseGate_a0d33dba5ca22b83898d3c7b8148ef439}} 
+\index{Noise\+Gate@{Noise\+Gate}!Noise\+Gate\+By\+Flat@{Noise\+Gate\+By\+Flat}}
+\index{Noise\+Gate\+By\+Flat@{Noise\+Gate\+By\+Flat}!Noise\+Gate@{Noise\+Gate}}
+\subsubsection{\texorpdfstring{Noise\+Gate\+By\+Flat()}{NoiseGateByFlat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Noise\+Gate\+::\+Noise\+Gate\+By\+Flat (\begin{DoxyParamCaption}\item[{short $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{int}]{cutoff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Applies Noise Gate to 16-\/bit buffer, specified by value
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Max} & signal level to gate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNoiseGate_a9129f03e1f6ee5ea3f893e5ad554e036}\label{classNoiseGate_a9129f03e1f6ee5ea3f893e5ad554e036}} 
+\index{Noise\+Gate@{Noise\+Gate}!Noise\+Gate\+By\+Percent@{Noise\+Gate\+By\+Percent}}
+\index{Noise\+Gate\+By\+Percent@{Noise\+Gate\+By\+Percent}!Noise\+Gate@{Noise\+Gate}}
+\subsubsection{\texorpdfstring{Noise\+Gate\+By\+Percent()}{NoiseGateByPercent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Noise\+Gate\+::\+Noise\+Gate\+By\+Percent (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{float}]{cutoff\+Fraction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Applies Noise Gate to 8-\/bit buffer, specified by decimal of signal
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Ratio} & of max signal to gate (should be between 0 and 1) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNoiseGate_a8ca4b8f8894725e85023bb791251b2c1}\label{classNoiseGate_a8ca4b8f8894725e85023bb791251b2c1}} 
+\index{Noise\+Gate@{Noise\+Gate}!Noise\+Gate\+By\+Percent@{Noise\+Gate\+By\+Percent}}
+\index{Noise\+Gate\+By\+Percent@{Noise\+Gate\+By\+Percent}!Noise\+Gate@{Noise\+Gate}}
+\subsubsection{\texorpdfstring{Noise\+Gate\+By\+Percent()}{NoiseGateByPercent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Noise\+Gate\+::\+Noise\+Gate\+By\+Percent (\begin{DoxyParamCaption}\item[{short $\ast$}]{buffer,  }\item[{int}]{buffer\+Size,  }\item[{float}]{cutoff\+Fraction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Applies Noise Gate to 16-\/bit buffer, specified by decimal of signal
+
+
+\begin{DoxyParams}{Parameters}
+{\em Start} & of the buffer \\
+\hline
+{\em Size} & of the buffer \\
+\hline
+{\em Ratio} & of max signal to gate (should be between 0 and 1) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Noise\+Gate.\+h\item 
+Noise\+Gate.\+cpp\end{DoxyCompactItemize}
