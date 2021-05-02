@@ -119,4 +119,35 @@ bool Wav::is16Bit() {
 	}
 }
 
+void Wav::makeCSV(int numFiles){
+
+	std::fstream fout;
+	fout.open("audiofiles.csv", std::ios::out | std::ios::app);
+
+	fout << "wav_size" << ", "
+    	     << "fmt_chunk_size" << ", "
+	     << "audio_format" << ", "
+	     << "num_channels" << ", "
+	     << "sample_rate" << ", "
+	     << "byte_rate" << ", "
+	     << "sample_alignment" << ", "
+	     << "bit_depth" << ", "
+	     << "data_bytes"
+	     << "\n";
+
+	for(int i=0; i < numFiles; i++){
+		
+    	fout << waveHeader.wav_size << ", "
+    	     << waveHeader.fmt_chunk_size << ", "
+	     << waveHeader.audio_format << ", "
+	     << waveHeader.num_channels << ", "
+	     << waveHeader.sample_rate << ", "
+	     << waveHeader.byte_rate << ", "
+	     << waveHeader.sample_alignment << ", "
+	     << waveHeader.bit_depth << ", "
+	     << waveHeader.data_bytes
+	     << "\n";
+	}
+
+}
 

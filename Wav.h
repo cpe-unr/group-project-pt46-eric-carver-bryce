@@ -12,7 +12,7 @@
 class Wav {
 public:
     void readFile(const std::string &fileName);
-    virtual void writeFile(const std::string &outFileName);
+    void writeFile(const std::string &outFileName);
 private:
     unsigned char* buffer = NULL;
     wav_header waveHeader;
@@ -30,5 +30,6 @@ public:
     void setWaveHeader(wav_header* header);
     bool isStereo();
     bool is16Bit();
+    void makeCSV(int numFiles);
 };
 #endif //WAV_H
