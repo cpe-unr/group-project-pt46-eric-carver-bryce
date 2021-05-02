@@ -119,12 +119,13 @@ bool Wav::is16Bit() {
 	}
 }
 
-void Wav::makeCSV(int numFiles){
+void Wav::makeCSV(std::vector<std::string> files){
 
 	std::fstream fout;
 	fout.open("audiofiles.csv", std::ios::out | std::ios::app);
 
-	fout << "wav_size" << ", "
+	fout << "filename" << ", "
+	     << "wav_size" << ", "
     	     << "fmt_chunk_size" << ", "
 	     << "audio_format" << ", "
 	     << "num_channels" << ", "
@@ -135,9 +136,10 @@ void Wav::makeCSV(int numFiles){
 	     << "data_bytes"
 	     << "\n";
 
-	for(int i=0; i < numFiles; i++){
+	for(int i=0; i < files.size(); i++){
 		
-    	fout << waveHeader.wav_size << ", "
+    	fout << files[i] << ", "
+	     << waveHeader.wav_size << ", "
     	     << waveHeader.fmt_chunk_size << ", "
 	     << waveHeader.audio_format << ", "
 	     << waveHeader.num_channels << ", "
