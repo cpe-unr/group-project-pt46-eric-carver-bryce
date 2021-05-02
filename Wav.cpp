@@ -29,7 +29,7 @@ short *Wav::getShortBuffer() const{
     return shortBuffer;
 }
 
-void Wav::writeFile(const std::string &outFileName) {
+/*void Wav::writeFile(const std::string &outFileName) {
     if(Wav::isStereo()){
 	if(Wav::is16Bit()){
 	}
@@ -49,7 +49,7 @@ void Wav::writeFile(const std::string &outFileName) {
     		outFile.close();
 	}
     }
-}
+}*/
 
 Wav::~Wav() {
     if(buffer != NULL)

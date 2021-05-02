@@ -10,6 +10,7 @@ private:
 public:
 	EightBitStereo(const Wav& wav);
 	//EightBitStereo(const EightBitStereo& rhs);
+	void writeFile(const std::string &outFileName) override;
 	void makeStereoBuffer(const Wav& wav);
 	unsigned char *getLeftBuffer();
 	unsigned char *getRightBuffer();
