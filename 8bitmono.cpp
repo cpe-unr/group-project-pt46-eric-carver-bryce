@@ -8,5 +8,5 @@
     outFile.close();
 }*/
 
-EightBitMono::EightBitMono(const Wav& wav){}
+EightBitMono::EightBitMono(const Wav& wav): Wav(wav) {}
 

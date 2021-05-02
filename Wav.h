@@ -31,6 +31,7 @@ public:
     void setWaveHeader(wav_header* header);
     bool isStereo();
     bool is16Bit();
-    void makeCSV(std::vector<std::string> files);
+    static void makeCSV();
+    void addToCSV(std::string filename);
 };
 #endif //WAV_H

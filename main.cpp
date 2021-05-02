@@ -49,10 +49,11 @@ int main(int argc, char* argv[]) {
 	files = dir.getFileNames(argv[1]); //Audio files are stored in vector: files
 
 	std::vector<Wav*> wavObjects;
+	Wav::makeCSV();
 	for(int i=0; i < files.size(); i++){ 
 		Wav* wav = Wav::Create(files[i]);
-		wav->writeFile("dog");
 		wavObjects.push_back(wav); //Wav Objects that hold buffers 							and technical info in 							vector: wavObjects
+		wav->addToCSV(files[i]);
 		wav->~Wav();	
 		std::cout << files[i] << std::endl;
 	}

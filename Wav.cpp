@@ -92,11 +92,7 @@ wav_header Wav::getWaveHeader() {
 Wav::Wav(){}
 
 Wav::Wav(const Wav& rhs){
-	std::cout << "hey 1" << std::endl;
 	waveHeader = rhs.waveHeader;
-	std::cout << "hey 2" << std::endl;
-	buffer = rhs.buffer;
-	std::cout << "hey 3" << std::endl;
 }
 
 bool Wav::isStereo() {
@@ -119,7 +115,7 @@ bool Wav::is16Bit() {
 	}
 }
 
-void Wav::makeCSV(std::vector<std::string> files){
+void Wav::makeCSV(){
 
 	std::fstream fout;
 	fout.open("audiofiles.csv", std::ios::out | std::ios::app);
@@ -136,9 +132,16 @@ void Wav::makeCSV(std::vector<std::string> files){
 	     << "data_bytes"
 	     << "\n";
 
-	for(int i=0; i < files.size(); i++){
-		
-    	fout << files[i] << ", "
+	fout.close();
+
+}
+
+void Wav::addToCSV(std::string filename){
+
+	std::fstream fout;
+	fout.open("audiofiles.csv", std::ios::out | std::ios::app);
+	
+    	fout << filename << ", "
 	     << waveHeader.wav_size << ", "
     	     << waveHeader.fmt_chunk_size << ", "
 	     << waveHeader.audio_format << ", "
@@ -149,7 +152,7 @@ void Wav::makeCSV(std::vector<std::string> files){
 	     << waveHeader.bit_depth << ", "
 	     << waveHeader.data_bytes
 	     << "\n";
-	}
 
+	fout.close();
 }
 

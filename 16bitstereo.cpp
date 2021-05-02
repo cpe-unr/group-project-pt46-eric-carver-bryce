@@ -21,10 +21,12 @@ void SixteenBitStereo::makeStereoBuffer(const Wav& wav){
 	}
 }	
 
-SixteenBitStereo::SixteenBitStereo(const Wav& wav){
+SixteenBitStereo::SixteenBitStereo(const Wav& wav): Wav(wav) {
 	std::cout << "hey from constructor" << std::endl;
 	makeStereoBuffer(wav);
 }
+
+SixteenBitStereo::SixteenBitStereo(const SixteenBitStereo& rhs): Wav(rhs) {}
 
 short *SixteenBitStereo::getBuffer() const{
     return shortBuffer;
