@@ -5,7 +5,17 @@
 
 class EightBitMono: public Wav{
 public:
+	/**
+	Writes 8-Bit Mono wav files.   
+	
+	@param outFileName - name of new wav file
+	*/
 	void writeFile(const std::string &outFileName) override;
+	/**
+	Creates EightBitMono object from wav object.
+	
+	@param wav - wav object
+	*/
 	EightBitMono(const Wav& wav);
 
 

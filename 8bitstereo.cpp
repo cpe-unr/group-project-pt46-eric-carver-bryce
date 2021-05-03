@@ -25,11 +25,10 @@ void EightBitStereo::makeStereoBuffer(const Wav& wav){
 
 void EightBitStereo::writeFile(const std::string &outFileName){
 	wav_header waveHeader = Wav::getWaveHeader();
-	unsigned char* buffer = Wav::getBuffer();
 
 	std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
 	outFile.write((char*)&waveHeader,sizeof(wav_header));
-	outFile.write((char*)buffer, waveHeader.data_bytes);
+	outFile.write((char*)combinedBuffer, waveHeader.data_bytes);
 	outFile.close();
 }
 
