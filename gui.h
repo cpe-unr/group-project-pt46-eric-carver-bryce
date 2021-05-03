@@ -8,15 +8,16 @@ namespace Gui
         
     
     enum MENU_CHOICE
-    {
-        EXIT = 0
+        {
+        EXIT = 0,
         EDIT_METADATA = 1
        
         
-    };
-    }
-    const MENU_CHOICE getMenuChoice();
+        };
+     MENU_CHOICE getMenuChoice();
 
+    }
+    
     namespace ProcessingMenu
     {
         const int UNKNOWN = -1;
@@ -31,20 +32,20 @@ namespace Gui
     {
         enum MENU_CHOICE
         {
-            EXIT = 0
+            EXIT = 0,
             EDIT_FILE_NAME = 1
         };
-    const MENU_CHOICE getMenuChoice();
+     MENU_CHOICE getMenuChoice();
     }
     
     namespace CSVMenu
     {
         enum MENU_CHOICE
         {
-            EXIT = 0
+            EXIT = 0,
             MAKE_CSV = 1
         };
-        const MENU_CHOICE getMenuChoice();
+         MENU_CHOICE getMenuChoice();
     }
 };
 
