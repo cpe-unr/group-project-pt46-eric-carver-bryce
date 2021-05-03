@@ -6,6 +6,7 @@
 #define WAV_H
 
 #include "WaveHeader.h"
+#include "Metadata.h"
 #include <string>
 #include <vector>
 
@@ -17,6 +18,7 @@ public:
 private:
     unsigned char* buffer = NULL;
     wav_header waveHeader;
+    std::vector<Metadata*> metadataVector;
 public:
     virtual ~Wav();
     Wav();

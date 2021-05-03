@@ -14,6 +14,7 @@ void Wav::readFile(const std::string &fileName) {
         file.read((char*)&waveHeader, sizeof(wav_header));
         buffer = new unsigned char[waveHeader.data_bytes];
         file.read((char*)buffer, waveHeader.data_bytes);
+       	
         file.close();
 
 	std::cout << 1 << std::endl;
