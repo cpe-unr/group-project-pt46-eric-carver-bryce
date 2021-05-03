@@ -20,9 +20,8 @@ std::vector<std::string> Directory::getFileNames(const char* path){
 		}
 	}
 	
-	else{
-	
-	}
+	else{}
+	closedir(dr);
 
 	return files;
 }
