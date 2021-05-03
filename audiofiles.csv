@@ -4,3 +4,7 @@ audiofiles/metadatatest.wav, 623066, 16, 1, 1, 44100, 88200, 2, 16, 622878
 audiofiles/yes-26-bit-stereo.wav, 1245980, 16, 1, 2, 44100, 176400, 4, 16, 1245756
 audiofiles/yes-16-bit-mono.wav, 623036, 16, 1, 1, 44100, 88200, 2, 16, 622878
 audiofiles/yes-8bit-mono.wav, 311597, 16, 1, 1, 44100, 44100, 1, 8, 311439
+filename, wav_size, fmt_chunk_size, audio_format, num_channels, sample_rate, byte_rate, sample_alignment, bit_depth, data_bytes
+audiofiles/metadatatest.wav, 623066, 16, 1, 1, 44100, 88200, 2, 16, 622878
+filename, wav_size, fmt_chunk_size, audio_format, num_channels, sample_rate, byte_rate, sample_alignment, bit_depth, data_bytes
+audiofiles/metadatatest.wav, 623066, 16, 1, 1, 44100, 88200, 2, 16, 622878

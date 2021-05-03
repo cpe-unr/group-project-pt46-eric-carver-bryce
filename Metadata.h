@@ -4,3 +4,8 @@ struct Metadata{
 	int length;
 	std::string metadata;
 };
+struct MetadataHeader{
+	char list[4];
+	int metadataSize;
+	char info[4];
+};

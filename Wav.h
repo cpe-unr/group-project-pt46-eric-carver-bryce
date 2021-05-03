@@ -18,7 +18,8 @@ public:
 private:
     unsigned char* buffer = NULL;
     wav_header waveHeader;
-    std::vector<Metadata*> metadataVector;
+    std::vector<Metadata> metadataVector;
+    MetadataHeader metadataHeader;
 public:
     virtual ~Wav();
     Wav();

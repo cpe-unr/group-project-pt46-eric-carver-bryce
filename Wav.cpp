@@ -14,7 +14,18 @@ void Wav::readFile(const std::string &fileName) {
         file.read((char*)&waveHeader, sizeof(wav_header));
         buffer = new unsigned char[waveHeader.data_bytes];
         file.read((char*)buffer, waveHeader.data_bytes);
-       	
+       	file.read((char*)&metadataHeader, sizeof(MetadataHeader));
+       	if(metadataHeader.info[0] == 'I' && metadataHeader.info[1] == 'N' && metadataHeader.info[2] == 'F' && metadataHeader.info[3] == 'O'){
+       		int x = metadataHeader.metadataSize - 4;
+       		while(x>0){
+       			Metadata newMetadata;
+       			file.read((char*)&newMetadata, 8);
+       			newMetadata.metadata.resize(newMetadata.length);
+       			file.read((char*)(newMetadata.metadata.data()), newMetadata.length);
+       			x = x-(8+newMetadata.length);
+       			metadataVector.push_back(newMetadata);
+       		}
+       	}
         file.close();
 
 	std::cout << 1 << std::endl;
