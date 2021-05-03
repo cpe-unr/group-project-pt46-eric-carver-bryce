@@ -6,6 +6,7 @@
 #include "Wav.h"
 #include "directory.h"
 #include "Processor.h"
+#include "gui.h"
 
 const std::string eightbitmono = "yes-8bit-mono.wav";
 const std::string eightbitstereo = "yes-8-bit-stereo.wav";

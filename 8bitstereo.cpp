@@ -22,6 +22,9 @@ void EightBitStereo::makeStereoBuffer(const Wav& wav){
 	}
 }	
 
+void EightBitStereo::writeFile(const std::string &outFileName){
+}
+
 EightBitStereo::EightBitStereo(const Wav& wav): Wav(wav){
 	makeStereoBuffer(wav);
 }

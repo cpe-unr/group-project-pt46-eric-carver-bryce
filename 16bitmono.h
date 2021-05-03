@@ -7,6 +7,7 @@ class SixteenBitMono: public Wav{
 public:
 	short *getBuffer() const;
 	SixteenBitMono(const Wav& wav);
+	void writeFile(const std::string &outFileName) override;
 
 };
 #endif

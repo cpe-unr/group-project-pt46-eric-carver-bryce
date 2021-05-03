@@ -28,6 +28,9 @@ SixteenBitStereo::SixteenBitStereo(const Wav& wav): Wav(wav) {
 
 SixteenBitStereo::SixteenBitStereo(const SixteenBitStereo& rhs): Wav(rhs) {}
 
+void SixteenBitStereo::writeFile(const std::string &outFileName){
+}
+
 short *SixteenBitStereo::getBuffer() const{
     return shortBuffer;
 }

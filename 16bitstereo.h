@@ -11,6 +11,7 @@ private:
 public:
 	SixteenBitStereo(const Wav& wav);
 	SixteenBitStereo(const SixteenBitStereo& rhs);
+	void writeFile(const std::string &outFileName) override;
 	void makeStereoBuffer(const Wav& wav);
 	short *getLeftBuffer();
 	short *getRightBuffer();

@@ -5,3 +5,6 @@ short *SixteenBitMono::getBuffer() const{
 }
 
 SixteenBitMono::SixteenBitMono(const Wav& wav): Wav(wav) {}
+
+void SixteenBitMono::writeFile(const std::string &outFileName){
+}
