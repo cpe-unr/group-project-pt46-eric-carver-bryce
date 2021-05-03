@@ -16,5 +16,6 @@ public:
 	short *getLeftBuffer();
 	short *getRightBuffer();
 	short *getBuffer() const;
+	void combineBuffers();
 };
 #endif

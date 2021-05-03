@@ -1,6 +1,7 @@
 #include "8bitstereo.h"
 #include <iostream>
 #include <cstring>
+#include <fstream>
 
 void EightBitStereo::makeStereoBuffer(const Wav& wav){
 	int i = 0;
@@ -23,6 +24,13 @@ void EightBitStereo::makeStereoBuffer(const Wav& wav){
 }	
 
 void EightBitStereo::writeFile(const std::string &outFileName){
+	wav_header waveHeader = Wav::getWaveHeader();
+	unsigned char* buffer = Wav::getBuffer();
+
+	std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
+	outFile.write((char*)&waveHeader,sizeof(wav_header));
+	outFile.write((char*)buffer, waveHeader.data_bytes);
+	outFile.close();
 }
 
 EightBitStereo::EightBitStereo(const Wav& wav): Wav(wav){
@@ -34,4 +42,15 @@ unsigned char *EightBitStereo::getLeftBuffer(){
 }
 unsigned char *EightBitStereo::getRightBuffer(){
 	return rightBuffer;
+}
+
+void EightBitStereo::combineBuffers(){
+	int j = 0;
+	wav_header waveHeader = Wav::getWaveHeader();
+
+	for(int i = 0; i < (waveHeader.data_bytes/2); i++){
+		combinedBuffer[j] = leftBuffer[i];
+		combinedBuffer[j + 1] = rightBuffer[i];
+		j += 2;
+	}
 }
