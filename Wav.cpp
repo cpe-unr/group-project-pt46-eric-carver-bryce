@@ -41,28 +41,6 @@ short *Wav::getShortBuffer() const{
     return shortBuffer;
 }
 
-/*void Wav::writeFile(const std::string &outFileName) {
-    if(Wav::isStereo()){
-	if(Wav::is16Bit()){
-	}
-
-	else{
-	}
-    }
-
-    else{
-	if(Wav::is16Bit()){
-	}
-
-	else{
-   	 	std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
-   	 	outFile.write((char*)&waveHeader,sizeof(wav_header));
-    		outFile.write((char*)buffer, waveHeader.data_bytes);
-    		outFile.close();
-	}
-    }
-}*/
-
 Wav::~Wav() {
     if(buffer != NULL)
         delete[] buffer;
