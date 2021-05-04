@@ -89,5 +89,7 @@ public:
 	@param - filename - name of wav file
 	*/
 	void addToCSV(std::string filename);
+
+	std::vector<Metadata> getMetadataVector();
 };
 #endif //WAV_H
