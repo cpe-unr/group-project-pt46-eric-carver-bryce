@@ -35,14 +35,17 @@ public:
 	void makeStereoBuffer(const Wav& wav);
 	/**
 	Gets left Buffer.
+	@return Left Buffer
 	*/
 	short *getLeftBuffer();
 	/**
-	Gets right Buffer. 
+	Gets right Buffer.
+	@return Right Buffer 
 	*/
 	short *getRightBuffer();
 	/**
 	Gets short Buffer.
+	@return Short Buffer
 	*/
 	short *getBuffer() const;
 	/**

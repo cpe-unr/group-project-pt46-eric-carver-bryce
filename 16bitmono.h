@@ -7,6 +7,7 @@ class SixteenBitMono: public Wav{
 public:
 	/**
 	Returns getShortBuffer().
+	@return Short Buffer
 	*/
 	short *getBuffer() const;
 	/**

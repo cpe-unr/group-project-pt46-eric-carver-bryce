@@ -1,0 +1,105 @@
+\hypertarget{classEightBitStereo}{}\section{Eight\+Bit\+Stereo Class Reference}
+\label{classEightBitStereo}\index{Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}}
+
+
+Inheritance diagram for Eight\+Bit\+Stereo\+:
+% FIG 0
+
+
+Collaboration diagram for Eight\+Bit\+Stereo\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEightBitStereo_a41153c5acf30d3805d7753bcd885ff53}{Eight\+Bit\+Stereo} (const \hyperlink{classWav}{Wav} \&wav)
+\item 
+void \hyperlink{classEightBitStereo_a5eb9c2b69034672b42662c0b50e54d64}{write\+File} (const std\+::string \&out\+File\+Name) override
+\item 
+void \hyperlink{classEightBitStereo_a1026484b3f96f2cee5177fa4157b94c8}{make\+Stereo\+Buffer} (const \hyperlink{classWav}{Wav} \&wav)
+\item 
+void \hyperlink{classEightBitStereo_a2012cb731c4a6ead9afbcfe0309df589}{combine\+Buffers} ()
+\item 
+unsigned char $\ast$ \hyperlink{classEightBitStereo_a02f9e38138558a3961a0e9ebae8777f8}{get\+Left\+Buffer} ()
+\item 
+unsigned char $\ast$ \hyperlink{classEightBitStereo_a261d17d0eea610c8929c5c2a814da8f5}{get\+Right\+Buffer} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEightBitStereo_a41153c5acf30d3805d7753bcd885ff53}\label{classEightBitStereo_a41153c5acf30d3805d7753bcd885ff53}} 
+\index{Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}!Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}}
+\index{Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}!Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{Eight\+Bit\+Stereo()}{EightBitStereo()}}
+{\footnotesize\ttfamily Eight\+Bit\+Stereo\+::\+Eight\+Bit\+Stereo (\begin{DoxyParamCaption}\item[{const \hyperlink{classWav}{Wav} \&}]{wav }\end{DoxyParamCaption})}
+
+Creates \hyperlink{classEightBitStereo}{Eight\+Bit\+Stereo} object from wav object
+
+
+\begin{DoxyParams}{Parameters}
+{\em wav} & -\/ copy of wav object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEightBitStereo_a2012cb731c4a6ead9afbcfe0309df589}\label{classEightBitStereo_a2012cb731c4a6ead9afbcfe0309df589}} 
+\index{Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}!combine\+Buffers@{combine\+Buffers}}
+\index{combine\+Buffers@{combine\+Buffers}!Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{combine\+Buffers()}{combineBuffers()}}
+{\footnotesize\ttfamily void Eight\+Bit\+Stereo\+::combine\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Combines left and right buffers in to combined\+Buffer. \mbox{\Hypertarget{classEightBitStereo_a02f9e38138558a3961a0e9ebae8777f8}\label{classEightBitStereo_a02f9e38138558a3961a0e9ebae8777f8}} 
+\index{Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}!get\+Left\+Buffer@{get\+Left\+Buffer}}
+\index{get\+Left\+Buffer@{get\+Left\+Buffer}!Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{get\+Left\+Buffer()}{getLeftBuffer()}}
+{\footnotesize\ttfamily unsigned char $\ast$ Eight\+Bit\+Stereo\+::get\+Left\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets left buffer. \begin{DoxyReturn}{Returns}
+Left Buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEightBitStereo_a261d17d0eea610c8929c5c2a814da8f5}\label{classEightBitStereo_a261d17d0eea610c8929c5c2a814da8f5}} 
+\index{Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}!get\+Right\+Buffer@{get\+Right\+Buffer}}
+\index{get\+Right\+Buffer@{get\+Right\+Buffer}!Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{get\+Right\+Buffer()}{getRightBuffer()}}
+{\footnotesize\ttfamily unsigned char $\ast$ Eight\+Bit\+Stereo\+::get\+Right\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets right buffer. \begin{DoxyReturn}{Returns}
+Right Buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEightBitStereo_a1026484b3f96f2cee5177fa4157b94c8}\label{classEightBitStereo_a1026484b3f96f2cee5177fa4157b94c8}} 
+\index{Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}!make\+Stereo\+Buffer@{make\+Stereo\+Buffer}}
+\index{make\+Stereo\+Buffer@{make\+Stereo\+Buffer}!Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{make\+Stereo\+Buffer()}{makeStereoBuffer()}}
+{\footnotesize\ttfamily void Eight\+Bit\+Stereo\+::make\+Stereo\+Buffer (\begin{DoxyParamCaption}\item[{const \hyperlink{classWav}{Wav} \&}]{wav }\end{DoxyParamCaption})}
+
+Creates left and right buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wav} & -\/ copy of wav object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEightBitStereo_a5eb9c2b69034672b42662c0b50e54d64}\label{classEightBitStereo_a5eb9c2b69034672b42662c0b50e54d64}} 
+\index{Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}!write\+File@{write\+File}}
+\index{write\+File@{write\+File}!Eight\+Bit\+Stereo@{Eight\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{write\+File()}{writeFile()}}
+{\footnotesize\ttfamily void Eight\+Bit\+Stereo\+::write\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{out\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Writes 8-\/bit \hyperlink{classStereo}{Stereo} wav files.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File\+Name} & -\/ name of new wav file \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classWav_a7bae34f37288c53cb113e76045f78098}{Wav}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+8bitstereo.\+h\item 
+8bitstereo.\+cpp\end{DoxyCompactItemize}

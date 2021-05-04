@@ -1,0 +1,131 @@
+\hypertarget{classSixteenBitStereo}{}\section{Sixteen\+Bit\+Stereo Class Reference}
+\label{classSixteenBitStereo}\index{Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}}
+
+
+Inheritance diagram for Sixteen\+Bit\+Stereo\+:
+% FIG 0
+
+
+Collaboration diagram for Sixteen\+Bit\+Stereo\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSixteenBitStereo_a13f3231e9e420e9a7acceaa300ee6c71}{Sixteen\+Bit\+Stereo} (const \hyperlink{classWav}{Wav} \&wav)
+\item 
+\hyperlink{classSixteenBitStereo_a0cf6266f0f86836c16cf3b278c6466b9}{Sixteen\+Bit\+Stereo} (const \hyperlink{classSixteenBitStereo}{Sixteen\+Bit\+Stereo} \&rhs)
+\item 
+void \hyperlink{classSixteenBitStereo_afe9914b160b78f406186aa6de864c288}{write\+File} (const std\+::string \&out\+File\+Name) override
+\item 
+void \hyperlink{classSixteenBitStereo_ae3432aada39f3db75e6452a141eb8465}{make\+Stereo\+Buffer} (const \hyperlink{classWav}{Wav} \&wav)
+\item 
+short $\ast$ \hyperlink{classSixteenBitStereo_a7f32d58142b5a0b0f2f3f6a3966d3123}{get\+Left\+Buffer} ()
+\item 
+short $\ast$ \hyperlink{classSixteenBitStereo_a1650df261c08a181004fe08fdf116bde}{get\+Right\+Buffer} ()
+\item 
+short $\ast$ \hyperlink{classSixteenBitStereo_a33d3535a8b8153adc232fac28d83b554}{get\+Buffer} () const
+\item 
+void \hyperlink{classSixteenBitStereo_a212fa2366d2dc762a4bdf461be1c76b2}{combine\+Buffers} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSixteenBitStereo_a13f3231e9e420e9a7acceaa300ee6c71}\label{classSixteenBitStereo_a13f3231e9e420e9a7acceaa300ee6c71}} 
+\index{Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}!Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}}
+\index{Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}!Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{Sixteen\+Bit\+Stereo()}{SixteenBitStereo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sixteen\+Bit\+Stereo\+::\+Sixteen\+Bit\+Stereo (\begin{DoxyParamCaption}\item[{const \hyperlink{classWav}{Wav} \&}]{wav }\end{DoxyParamCaption})}
+
+Creates \hyperlink{classSixteenBitStereo}{Sixteen\+Bit\+Stereo} object from wav object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wav} & -\/ copy of wav object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSixteenBitStereo_a0cf6266f0f86836c16cf3b278c6466b9}\label{classSixteenBitStereo_a0cf6266f0f86836c16cf3b278c6466b9}} 
+\index{Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}!Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}}
+\index{Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}!Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{Sixteen\+Bit\+Stereo()}{SixteenBitStereo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sixteen\+Bit\+Stereo\+::\+Sixteen\+Bit\+Stereo (\begin{DoxyParamCaption}\item[{const \hyperlink{classSixteenBitStereo}{Sixteen\+Bit\+Stereo} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy Constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & -\/ \hyperlink{classSixteenBitStereo}{Sixteen\+Bit\+Stereo} object to be copied \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSixteenBitStereo_a212fa2366d2dc762a4bdf461be1c76b2}\label{classSixteenBitStereo_a212fa2366d2dc762a4bdf461be1c76b2}} 
+\index{Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}!combine\+Buffers@{combine\+Buffers}}
+\index{combine\+Buffers@{combine\+Buffers}!Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{combine\+Buffers()}{combineBuffers()}}
+{\footnotesize\ttfamily void Sixteen\+Bit\+Stereo\+::combine\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Combines left and right buffers in to short\+Buffer. \mbox{\Hypertarget{classSixteenBitStereo_a33d3535a8b8153adc232fac28d83b554}\label{classSixteenBitStereo_a33d3535a8b8153adc232fac28d83b554}} 
+\index{Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}!get\+Buffer@{get\+Buffer}}
+\index{get\+Buffer@{get\+Buffer}!Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{get\+Buffer()}{getBuffer()}}
+{\footnotesize\ttfamily short $\ast$ Sixteen\+Bit\+Stereo\+::get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets short Buffer. \begin{DoxyReturn}{Returns}
+Short Buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSixteenBitStereo_a7f32d58142b5a0b0f2f3f6a3966d3123}\label{classSixteenBitStereo_a7f32d58142b5a0b0f2f3f6a3966d3123}} 
+\index{Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}!get\+Left\+Buffer@{get\+Left\+Buffer}}
+\index{get\+Left\+Buffer@{get\+Left\+Buffer}!Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{get\+Left\+Buffer()}{getLeftBuffer()}}
+{\footnotesize\ttfamily short $\ast$ Sixteen\+Bit\+Stereo\+::get\+Left\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets left Buffer. \begin{DoxyReturn}{Returns}
+Left Buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSixteenBitStereo_a1650df261c08a181004fe08fdf116bde}\label{classSixteenBitStereo_a1650df261c08a181004fe08fdf116bde}} 
+\index{Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}!get\+Right\+Buffer@{get\+Right\+Buffer}}
+\index{get\+Right\+Buffer@{get\+Right\+Buffer}!Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{get\+Right\+Buffer()}{getRightBuffer()}}
+{\footnotesize\ttfamily short $\ast$ Sixteen\+Bit\+Stereo\+::get\+Right\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets right Buffer. \begin{DoxyReturn}{Returns}
+Right Buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSixteenBitStereo_ae3432aada39f3db75e6452a141eb8465}\label{classSixteenBitStereo_ae3432aada39f3db75e6452a141eb8465}} 
+\index{Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}!make\+Stereo\+Buffer@{make\+Stereo\+Buffer}}
+\index{make\+Stereo\+Buffer@{make\+Stereo\+Buffer}!Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{make\+Stereo\+Buffer()}{makeStereoBuffer()}}
+{\footnotesize\ttfamily void Sixteen\+Bit\+Stereo\+::make\+Stereo\+Buffer (\begin{DoxyParamCaption}\item[{const \hyperlink{classWav}{Wav} \&}]{wav }\end{DoxyParamCaption})}
+
+Creates left and right buffer from short buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wav} & -\/ copy of wav object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSixteenBitStereo_afe9914b160b78f406186aa6de864c288}\label{classSixteenBitStereo_afe9914b160b78f406186aa6de864c288}} 
+\index{Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}!write\+File@{write\+File}}
+\index{write\+File@{write\+File}!Sixteen\+Bit\+Stereo@{Sixteen\+Bit\+Stereo}}
+\subsubsection{\texorpdfstring{write\+File()}{writeFile()}}
+{\footnotesize\ttfamily void Sixteen\+Bit\+Stereo\+::write\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{out\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Writes 16-\/bit \hyperlink{classStereo}{Stereo} wav files.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File\+Name} & -\/ name of new wav file \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classWav_a7bae34f37288c53cb113e76045f78098}{Wav}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+16bitstereo.\+h\item 
+16bitstereo.\+cpp\end{DoxyCompactItemize}

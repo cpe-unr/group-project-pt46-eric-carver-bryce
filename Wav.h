@@ -53,14 +53,17 @@ public:
 public:
 	/**
 	Gets copy of audio buffer.
+	@return Unsigned Char Buffer Pointer
 	*/
 	unsigned char *getBuffer() const;
 	/**
 	Gets 16-bit buffer.
+	@return  Short Buffer Pointer
 	*/
 	short *getShortBuffer() const;
 	/**
 	Gets size of buffer.
+	@return Size of Buffer
 	*/
 	int getBufferSize() const;
 	/**
@@ -69,10 +72,12 @@ public:
 	wav_header getWaveHeader();
 	/**
 	Determines whether wav file is Stereo or Mono.
+	@return True or False
 	*/
 	bool isStereo();
 	/**
 	Determines whether wav file is 8 or 16 bit.
+	@return True or False
 	*/
 	bool is16Bit();
 	/**

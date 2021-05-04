@@ -33,10 +33,12 @@ public:
 	void combineBuffers();
 	/**
 	Gets left buffer.
+	@return Left Buffer
 	*/
 	unsigned char *getLeftBuffer();
 	/**
 	Gets right buffer. 
+	@return Right Buffer
 	*/
 	unsigned char *getRightBuffer();
 };

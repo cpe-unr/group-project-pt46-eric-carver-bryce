@@ -1,0 +1,211 @@
+\hypertarget{classWav}{}\section{Wav Class Reference}
+\label{classWav}\index{Wav@{Wav}}
+
+
+Inheritance diagram for Wav\+:
+% FIG 0
+
+
+Collaboration diagram for Wav\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classWav_a1c4230cec49d30147a5b8a1950083f7c}{read\+File} (const std\+::string \&file\+Name)
+\item 
+virtual void \hyperlink{classWav_a7bae34f37288c53cb113e76045f78098}{write\+File} (const std\+::string \&out\+File\+Name)
+\item 
+virtual \hyperlink{classWav_a1510b246ba121b103a60b8e7839af25f}{$\sim$\+Wav} ()
+\item 
+\hyperlink{classWav_abe9848ac7af353c82a78f00a600c18e6}{Wav} ()
+\item 
+\hyperlink{classWav_a8c11f0c7e8573a4c9180e5690ab2a354}{Wav} (const \hyperlink{classWav}{Wav} \&rhs)
+\item 
+unsigned char $\ast$ \hyperlink{classWav_aa713fc552ec8d011df0acede14d23295}{get\+Buffer} () const
+\item 
+short $\ast$ \hyperlink{classWav_a24c23c9823a08c0ff1a2a39427b36135}{get\+Short\+Buffer} () const
+\item 
+int \hyperlink{classWav_a71fdfa1d9f5e7c1b86f07bbff4249dca}{get\+Buffer\+Size} () const
+\item 
+\hyperlink{structwav__header}{wav\+\_\+header} \hyperlink{classWav_a7b640870f22bd813b1f211c9ef3139ec}{get\+Wave\+Header} ()
+\item 
+bool \hyperlink{classWav_ad933a085980a47031c91a91f9a3539ff}{is\+Stereo} ()
+\item 
+bool \hyperlink{classWav_a476a9bed5c03843098b7ecf67d5afeaf}{is16\+Bit} ()
+\item 
+void \hyperlink{classWav_a6e5d91d38497df976e0ec5d9d391e8e5}{add\+To\+C\+SV} (std\+::string filename)
+\item 
+void \hyperlink{classWav_af5b4f1d400f83bf349464e3403b765b2}{edit\+Metadata} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classWav}{Wav} $\ast$ \hyperlink{classWav_a3f742b0d3f1334a9be65ef264711d34f}{Create} (const std\+::string \&file\+Name)
+\item 
+static void \hyperlink{classWav_ab2edefac96cd80a22875705ad2533e91}{make\+C\+SV} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWav_a4495ea0de605957484c946bde5cd73e3}\label{classWav_a4495ea0de605957484c946bde5cd73e3}} 
+std\+::vector$<$ \hyperlink{structMetadata}{Metadata} $>$ {\bfseries metadata\+Vector}
+\item 
+\mbox{\Hypertarget{classWav_a56b98b402771736ce14157fe593023fe}\label{classWav_a56b98b402771736ce14157fe593023fe}} 
+\hyperlink{structMetadataHeader}{Metadata\+Header} {\bfseries metadata\+Header}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWav_a1510b246ba121b103a60b8e7839af25f}\label{classWav_a1510b246ba121b103a60b8e7839af25f}} 
+\index{Wav@{Wav}!````~Wav@{$\sim$\+Wav}}
+\index{````~Wav@{$\sim$\+Wav}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{$\sim$\+Wav()}{~Wav()}}
+{\footnotesize\ttfamily Wav\+::$\sim$\+Wav (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor \mbox{\Hypertarget{classWav_abe9848ac7af353c82a78f00a600c18e6}\label{classWav_abe9848ac7af353c82a78f00a600c18e6}} 
+\index{Wav@{Wav}!Wav@{Wav}}
+\index{Wav@{Wav}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{Wav()}{Wav()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wav\+::\+Wav (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{classWav_a8c11f0c7e8573a4c9180e5690ab2a354}\label{classWav_a8c11f0c7e8573a4c9180e5690ab2a354}} 
+\index{Wav@{Wav}!Wav@{Wav}}
+\index{Wav@{Wav}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{Wav()}{Wav()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wav\+::\+Wav (\begin{DoxyParamCaption}\item[{const \hyperlink{classWav}{Wav} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & -\/ \hyperlink{classWav}{Wav} object to be copied \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWav_a6e5d91d38497df976e0ec5d9d391e8e5}\label{classWav_a6e5d91d38497df976e0ec5d9d391e8e5}} 
+\index{Wav@{Wav}!add\+To\+C\+SV@{add\+To\+C\+SV}}
+\index{add\+To\+C\+SV@{add\+To\+C\+SV}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{add\+To\+C\+S\+V()}{addToCSV()}}
+{\footnotesize\ttfamily void Wav\+::add\+To\+C\+SV (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+Adds wav file name and technical information to C\+SV.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & filename -\/ name of wav file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWav_a3f742b0d3f1334a9be65ef264711d34f}\label{classWav_a3f742b0d3f1334a9be65ef264711d34f}} 
+\index{Wav@{Wav}!Create@{Create}}
+\index{Create@{Create}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \hyperlink{classWav}{Wav} $\ast$ Wav\+::\+Create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calls \hyperlink{classWav_a1c4230cec49d30147a5b8a1950083f7c}{read\+File()} and creates new \hyperlink{classWav}{Wav} object pointer based on file type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & file\+Name -\/ name of wav file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWav_af5b4f1d400f83bf349464e3403b765b2}\label{classWav_af5b4f1d400f83bf349464e3403b765b2}} 
+\index{Wav@{Wav}!edit\+Metadata@{edit\+Metadata}}
+\index{edit\+Metadata@{edit\+Metadata}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{edit\+Metadata()}{editMetadata()}}
+{\footnotesize\ttfamily void Wav\+::edit\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Edits metadata based on user input. \mbox{\Hypertarget{classWav_aa713fc552ec8d011df0acede14d23295}\label{classWav_aa713fc552ec8d011df0acede14d23295}} 
+\index{Wav@{Wav}!get\+Buffer@{get\+Buffer}}
+\index{get\+Buffer@{get\+Buffer}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{get\+Buffer()}{getBuffer()}}
+{\footnotesize\ttfamily unsigned char $\ast$ Wav\+::get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets copy of audio buffer. \begin{DoxyReturn}{Returns}
+Unsigned Char Buffer Pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWav_a71fdfa1d9f5e7c1b86f07bbff4249dca}\label{classWav_a71fdfa1d9f5e7c1b86f07bbff4249dca}} 
+\index{Wav@{Wav}!get\+Buffer\+Size@{get\+Buffer\+Size}}
+\index{get\+Buffer\+Size@{get\+Buffer\+Size}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{get\+Buffer\+Size()}{getBufferSize()}}
+{\footnotesize\ttfamily int Wav\+::get\+Buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets size of buffer. \begin{DoxyReturn}{Returns}
+Size of Buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWav_a24c23c9823a08c0ff1a2a39427b36135}\label{classWav_a24c23c9823a08c0ff1a2a39427b36135}} 
+\index{Wav@{Wav}!get\+Short\+Buffer@{get\+Short\+Buffer}}
+\index{get\+Short\+Buffer@{get\+Short\+Buffer}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{get\+Short\+Buffer()}{getShortBuffer()}}
+{\footnotesize\ttfamily short $\ast$ Wav\+::get\+Short\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets 16-\/bit buffer. \begin{DoxyReturn}{Returns}
+Short Buffer Pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWav_a7b640870f22bd813b1f211c9ef3139ec}\label{classWav_a7b640870f22bd813b1f211c9ef3139ec}} 
+\index{Wav@{Wav}!get\+Wave\+Header@{get\+Wave\+Header}}
+\index{get\+Wave\+Header@{get\+Wave\+Header}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{get\+Wave\+Header()}{getWaveHeader()}}
+{\footnotesize\ttfamily \hyperlink{structwav__header}{wav\+\_\+header} Wav\+::get\+Wave\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets copy of wave\+Header. \mbox{\Hypertarget{classWav_a476a9bed5c03843098b7ecf67d5afeaf}\label{classWav_a476a9bed5c03843098b7ecf67d5afeaf}} 
+\index{Wav@{Wav}!is16\+Bit@{is16\+Bit}}
+\index{is16\+Bit@{is16\+Bit}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{is16\+Bit()}{is16Bit()}}
+{\footnotesize\ttfamily bool Wav\+::is16\+Bit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determines whether wav file is 8 or 16 bit. \begin{DoxyReturn}{Returns}
+True or False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWav_ad933a085980a47031c91a91f9a3539ff}\label{classWav_ad933a085980a47031c91a91f9a3539ff}} 
+\index{Wav@{Wav}!is\+Stereo@{is\+Stereo}}
+\index{is\+Stereo@{is\+Stereo}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{is\+Stereo()}{isStereo()}}
+{\footnotesize\ttfamily bool Wav\+::is\+Stereo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determines whether wav file is \hyperlink{classStereo}{Stereo} or \hyperlink{classMono}{Mono}. \begin{DoxyReturn}{Returns}
+True or False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWav_ab2edefac96cd80a22875705ad2533e91}\label{classWav_ab2edefac96cd80a22875705ad2533e91}} 
+\index{Wav@{Wav}!make\+C\+SV@{make\+C\+SV}}
+\index{make\+C\+SV@{make\+C\+SV}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{make\+C\+S\+V()}{makeCSV()}}
+{\footnotesize\ttfamily void Wav\+::make\+C\+SV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates C\+SV with format. \mbox{\Hypertarget{classWav_a1c4230cec49d30147a5b8a1950083f7c}\label{classWav_a1c4230cec49d30147a5b8a1950083f7c}} 
+\index{Wav@{Wav}!read\+File@{read\+File}}
+\index{read\+File@{read\+File}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{read\+File()}{readFile()}}
+{\footnotesize\ttfamily void Wav\+::read\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+Reads in wav file, saving it\textquotesingle{}s wave\+Header info, audio data and metadata.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & -\/ name of wav file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWav_a7bae34f37288c53cb113e76045f78098}\label{classWav_a7bae34f37288c53cb113e76045f78098}} 
+\index{Wav@{Wav}!write\+File@{write\+File}}
+\index{write\+File@{write\+File}!Wav@{Wav}}
+\subsubsection{\texorpdfstring{write\+File()}{writeFile()}}
+{\footnotesize\ttfamily virtual void Wav\+::write\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{out\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Writes wav file based on type of file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File\+Name} & -\/ name of new wav file \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classSixteenBitStereo_afe9914b160b78f406186aa6de864c288}{Sixteen\+Bit\+Stereo}, \hyperlink{classSixteenBitMono_a331ba2f00ff9614c1c0dc99ad6fb55f6}{Sixteen\+Bit\+Mono}, \hyperlink{classEightBitStereo_a5eb9c2b69034672b42662c0b50e54d64}{Eight\+Bit\+Stereo}, and \hyperlink{classEightBitMono_ae654eb1cc4fbb5586b33a73081cfb033}{Eight\+Bit\+Mono}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Wav.\+h\item 
+Wav.\+cpp\end{DoxyCompactItemize}
