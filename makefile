@@ -1,5 +1,5 @@
-audioprocessor: main.cpp wav.o directory.o 16bitstereo.o 8bitstereo.o 16bitmono.o 8bitmono.o Echo.o Normalization.o NoiseGate.o Processor.h
-	g++ -std=c++11 main.cpp Wav.o directory.o 16bitstereo.o 8bitstereo.o 16bitmono.o 8bitmono.o Echo.o Normalization.o NoiseGate.o -o audioprocessor
+audioprocessor: main.cpp wav.o directory.o 16bitstereo.o 8bitstereo.o 16bitmono.o 8bitmono.o Echo.o Normalization.o NoiseGate.o Gui.o Processor.h
+	g++ -std=c++11 main.cpp Wav.o directory.o 16bitstereo.o 8bitstereo.o 16bitmono.o 8bitmono.o Echo.o Normalization.o NoiseGate.o Gui.o -o audioprocessor
 
 wav.o: Wav.cpp Wav.h
 	g++ -c -std=c++11 Wav.cpp
@@ -27,6 +27,9 @@ Normalization.o: Normalization.cpp Normalization.h
 	
 NoiseGate.o: NoiseGate.cpp NoiseGate.h
 	g++ -c -std=c++11 NoiseGate.cpp
+	
+Gui.o: Gui.cpp Gui.h
+	g++ -c -std=c++11 Gui.cpp
 
 clean:
 	rm *.o audioprocessor
