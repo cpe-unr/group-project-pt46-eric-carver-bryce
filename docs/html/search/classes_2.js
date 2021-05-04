@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['metadata',['Metadata',['../d9/d68/structMetadata.html',1,'']]],
-  ['metadataheader',['MetadataHeader',['../df/d31/structMetadataHeader.html',1,'']]],
-  ['mono',['Mono',['../d9/d5b/classMono.html',1,'']]]
+  ['echo',['Echo',['../dc/dd7/classEcho.html',1,'']]],
+  ['eightbitmono',['EightBitMono',['../da/db3/classEightBitMono.html',1,'']]],
+  ['eightbitstereo',['EightBitStereo',['../da/d9c/classEightBitStereo.html',1,'']]]
 ];

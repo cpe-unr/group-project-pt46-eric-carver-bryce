@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['newmain_2ecpp',['newmain.cpp',['../d8/df8/newmain_8cpp.html',1,'']]],
   ['noisegate',['NoiseGate',['../d3/d32/classNoiseGate.html',1,'']]],
   ['noisegatebyflat',['NoiseGateByFlat',['../d3/d32/classNoiseGate.html#a19bc105849e1d1c374e5fd1d0c2b716b',1,'NoiseGate::NoiseGateByFlat(unsigned char *buffer, int bufferSize, int cutoff)'],['../d3/d32/classNoiseGate.html#a0d33dba5ca22b83898d3c7b8148ef439',1,'NoiseGate::NoiseGateByFlat(short *buffer, int bufferSize, int cutoff)']]],
   ['noisegatebypercent',['NoiseGateByPercent',['../d3/d32/classNoiseGate.html#a9129f03e1f6ee5ea3f893e5ad554e036',1,'NoiseGate::NoiseGateByPercent(unsigned char *buffer, int bufferSize, float cutoffFraction)'],['../d3/d32/classNoiseGate.html#a8ca4b8f8894725e85023bb791251b2c1',1,'NoiseGate::NoiseGateByPercent(short *buffer, int bufferSize, float cutoffFraction)']]],

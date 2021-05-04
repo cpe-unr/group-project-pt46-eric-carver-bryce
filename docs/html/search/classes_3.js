@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['noisegate',['NoiseGate',['../d3/d32/classNoiseGate.html',1,'']]],
-  ['normalization',['Normalization',['../d6/d51/classNormalization.html',1,'']]]
+  ['metadata',['Metadata',['../d9/d68/structMetadata.html',1,'']]],
+  ['metadataheader',['MetadataHeader',['../df/d31/structMetadataHeader.html',1,'']]]
 ];

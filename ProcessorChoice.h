@@ -15,6 +15,14 @@
 class ProcessorChoice{
 	Wav* wavObject;
 public:
+	/**
+	Constructor
+	
+	@param Wav Object
+	*/
 	ProcessorChoice(Wav *inputObject){wavObject = inputObject;}
+	/**
+	Runs processor menu and applies processor if user requests. 
+	*/
 	void GetInput();
 };

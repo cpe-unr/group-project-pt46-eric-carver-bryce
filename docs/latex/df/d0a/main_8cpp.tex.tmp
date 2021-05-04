@@ -6,7 +6,9 @@
 {\ttfamily \#include \char`\"{}Wav.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}directory.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Processor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Processor\+Choice.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Gui.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}C\+S\+Vmenu.\+h\char`\"{}}\newline
 Include dependency graph for main.\+cpp\+:
 % FIG 0
 \subsection*{Functions}
@@ -16,21 +18,6 @@ void \hyperlink{main_8cpp_ad9d0e397081801b3c81f84aef014b9ca}{fn} ()
 \begin{DoxyCompactList}\small\item\em The function bar. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
 int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
-\end{DoxyCompactItemize}
-\subsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{main_8cpp_ab0c662563f1b6bd6595f84738e9a5df3}\label{main_8cpp_ab0c662563f1b6bd6595f84738e9a5df3}} 
-const std\+::string {\bfseries eightbitmono} = \char`\"{}yes-\/8bit-\/mono.\+wav\char`\"{}
-\item 
-\mbox{\Hypertarget{main_8cpp_a6f495c6b3c2031c101828320177654d0}\label{main_8cpp_a6f495c6b3c2031c101828320177654d0}} 
-const std\+::string {\bfseries eightbitstereo} = \char`\"{}yes-\/8-\/bit-\/stereo.\+wav\char`\"{}
-\item 
-\mbox{\Hypertarget{main_8cpp_adf3ce22f2f1b3188b310c525893feac0}\label{main_8cpp_adf3ce22f2f1b3188b310c525893feac0}} 
-const std\+::string {\bfseries sixteenbitmono} = \char`\"{}yes-\/16-\/bit-\/mono.\+wav\char`\"{}
-\item 
-\mbox{\Hypertarget{main_8cpp_ac81c597db91ef4de294c45abe9021127}\label{main_8cpp_ac81c597db91ef4de294c45abe9021127}} 
-const std\+::string {\bfseries sixteenbitstereo} = \char`\"{}yes-\/26-\/bit-\/stereo.\+wav\char`\"{}
 \end{DoxyCompactItemize}
 
 

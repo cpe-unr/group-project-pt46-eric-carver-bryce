@@ -1,6 +1,6 @@
 
-audioprocessor: alternativemain.cpp Wav.o directory.o 16bitstereo.o 8bitstereo.o 16bitmono.o 8bitmono.o Echo.o Normalization.o NoiseGate.o ProcessorChoice.o CSVmenu.o Processor.h
-	g++ -std=c++11 alternativemain.cpp Wav.o directory.o 16bitstereo.o 8bitstereo.o 16bitmono.o 8bitmono.o Echo.o Normalization.o NoiseGate.o ProcessorChoice.o CSVmenu.o -o audioprocessor
+audioprocessor: main.cpp Wav.o directory.o 16bitstereo.o 8bitstereo.o 16bitmono.o 8bitmono.o Echo.o Normalization.o NoiseGate.o ProcessorChoice.o CSVmenu.o Processor.h
+	g++ -std=c++11 main.cpp Wav.o directory.o 16bitstereo.o 8bitstereo.o 16bitmono.o 8bitmono.o Echo.o Normalization.o NoiseGate.o ProcessorChoice.o CSVmenu.o -o audioprocessor
 
 Wav.o: Wav.cpp Wav.h
 	g++ -c -std=c++11 Wav.cpp
