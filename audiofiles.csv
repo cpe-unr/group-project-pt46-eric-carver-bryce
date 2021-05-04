@@ -8,3 +8,7 @@ filename, wav_size, fmt_chunk_size, audio_format, num_channels, sample_rate, byt
 audiofiles/metadatatest.wav, 623066, 16, 1, 1, 44100, 88200, 2, 16, 622878
 filename, wav_size, fmt_chunk_size, audio_format, num_channels, sample_rate, byte_rate, sample_alignment, bit_depth, data_bytes
 audiofiles/metadatatest.wav, 623066, 16, 1, 1, 44100, 88200, 2, 16, 622878
+filename, wav_size, fmt_chunk_size, audio_format, num_channels, sample_rate, byte_rate, sample_alignment, bit_depth, data_bytes
+audiofiles/metadatatest.wav, 623066, 16, 1, 1, 44100, 88200, 2, 16, 622878
+filename, wav_size, fmt_chunk_size, audio_format, num_channels, sample_rate, byte_rate, sample_alignment, bit_depth, data_bytes
+audiofiles/metadatatest.wav, 623066, 16, 1, 1, 44100, 88200, 2, 16, 622878

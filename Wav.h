@@ -29,6 +29,7 @@ public:
 private:
 	unsigned char* buffer = NULL;
 	wav_header waveHeader;
+protected:
 	std::vector<Metadata> metadataVector;
 	MetadataHeader metadataHeader;
 public:

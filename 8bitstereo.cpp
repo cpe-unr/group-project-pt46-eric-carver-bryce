@@ -29,6 +29,13 @@ void EightBitStereo::writeFile(const std::string &outFileName){
 	std::ofstream outFile(outFileName, std::ios::out | std::ios::binary);
 	outFile.write((char*)&waveHeader,sizeof(wav_header));
 	outFile.write((char*)combinedBuffer, waveHeader.data_bytes);
+	if (metadataHeader.metadataSize > 0){
+		outFile.write((char const*)&metadataHeader,sizeof(MetadataHeader));
+		for(Metadata storedMetadata : metadataVector){
+			outFile.write((char*)&storedMetadata, 8);
+			outFile.write((char*)(storedMetadata.metadata.data()), storedMetadata.metadata.length());
+		}
+	}
 	outFile.close();
 }
 

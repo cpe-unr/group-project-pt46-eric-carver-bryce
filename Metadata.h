@@ -1,7 +1,7 @@
 #include <string>
 struct Metadata{
 	char chunkheader[4];
-	int length;
+	int length = 0;
 	std::string metadata;
 };
 struct MetadataHeader{
