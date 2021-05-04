@@ -18,6 +18,7 @@ void Normalization::NormalizationByPercent(unsigned char* buffer, int bufferSize
 	float scale = 128.0*scaleFactor/highest;
 	while (i < bufferSize){
 		*(buffer+i) = 128+(*(buffer+i))*(scale-128);
+		i++;
 	}
 }
 void Normalization::NormalizationByPercent(short* buffer, int bufferSize, float scaleFactor){//scaleFactor should be between 0 and 1
@@ -33,6 +34,7 @@ void Normalization::NormalizationByPercent(short* buffer, int bufferSize, float 
 	float scale = 32767.0*scaleFactor/highest;
 	while (i < bufferSize){
 		*(buffer+i) = (*(buffer+i))*scale;
+		i++;
 	}
 }
 void Normalization::NormalizationInDB(unsigned char* buffer, int bufferSize, float db){//db should be negative or 0 (0 meaning bring peak amplitude to maximum)

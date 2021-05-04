@@ -47,14 +47,14 @@ int main(int argc, char* argv[]) {
 	
 	std::vector<Wav*> wavObjects;
 	for(int i=0; i < files.size(); i++){ 
-		std::cout << "Will create " << files[i] << std::endl;//TEST TEST TEST
 		Wav* wav = Wav::Create(files[i]);
 		wavObjects.push_back(wav); //Wav Objects that hold buffers 							and technical info in 							vector: wavObjects
 		wav->~Wav();	
 	}
-	std::cout << "Has created." << std::endl;//TEST TEST TEST
 	for(int i=0; i < wavObjects.size(); i++){
+		std::cout << files[i] << std::endl;
 		ProcessorChoice chooser(wavObjects[i]);
+		chooser.GetInput();
 		int x;
 		while(x != 0 && x != 1){
 			std::cout << files[i] << std::endl;
