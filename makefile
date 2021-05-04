@@ -1,7 +1,7 @@
-audioprocessor: newmain.cpp wav.o directory.o 16bitstereo.o 8bitstereo.o 16bitmono.o 8bitmono.o Echo.o Normalization.o NoiseGate.o ProcessorChoice.o Processor.h
+audioprocessor: newmain.cpp Wav.o directory.o 16bitstereo.o 8bitstereo.o 16bitmono.o 8bitmono.o Echo.o Normalization.o NoiseGate.o ProcessorChoice.o Processor.h
 	g++ -std=c++11 newmain.cpp Wav.o directory.o 16bitstereo.o 8bitstereo.o 16bitmono.o 8bitmono.o Echo.o Normalization.o NoiseGate.o ProcessorChoice.o -o audioprocessor
 
-wav.o: Wav.cpp Wav.h
+Wav.o: Wav.cpp Wav.h
 	g++ -c -std=c++11 Wav.cpp
 
 directory.o: directory.cpp directory.h
