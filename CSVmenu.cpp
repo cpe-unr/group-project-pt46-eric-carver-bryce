@@ -16,7 +16,7 @@ void CSVMenu::runCSVMenu(std::vector<Wav *> wavObjects, std::vector<std::string>
 		
 	else if(userChoice == 1){
 		Wav::makeCSV();
-		for(int i = 0; wavObjects.size(); i++){
+		for(int i = 0; i < wavObjects.size(); i++){
 			wavObjects[i]->addToCSV(files[i]);
 		}
 	}
