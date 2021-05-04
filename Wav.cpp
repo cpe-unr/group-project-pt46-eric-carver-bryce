@@ -1,6 +1,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <cstring>
 #include "Wav.h"
 #include "16bitstereo.h"
 #include "8bitstereo.h"
@@ -27,8 +28,6 @@ void Wav::readFile(const std::string &fileName) {
        		}
        	}
         file.close();
-
-	std::cout << 1 << std::endl;
     }
 }
 
@@ -148,7 +147,7 @@ void Wav::addToCSV(std::string filename){
 	     << " " << ", ";
 	     for(int i = 0; i < metadataVector.size(); i++){
 		fout << metadataVector[i].metadata << ", ";
-		std::cout << "meta" << metadataVector[i].metadata << std::endl;
+		//std::cout << "meta" << metadataVector[i].metadata << std::endl;
 	     }
 	fout << "\n";
 
@@ -157,4 +156,35 @@ void Wav::addToCSV(std::string filename){
 
 std::vector<Metadata> Wav::getMetadataVector(){
 	return metadataVector;
+}
+
+void Wav::editMetadata(){
+	char header[4];
+	std::string meta;
+
+	std::cout << "Current Metadata: " << std::endl;
+	for(int i = 0; i < metadataVector.size(); i++){
+		std::cout << metadataVector[i].chunkheader
+		  	  << metadataVector[i].metadata << std::endl;		  
+	}
+
+	std::cout << "Enter Metadata Chunk Header: ";
+	std::cin >> header;
+	std::cout << "Enter Metadata: ";
+	std::cin >> meta;
+
+	for(int i = 0; i < metadataVector.size(); i++){
+		if(strcmp(header, metadataVector[i].chunkheader) == 0){
+			metadataVector[i].metadata = meta;
+			metadataVector[i].length = meta.length();
+		}		  
+	}
+	
+	Metadata newMetadata;
+	for(int i=0; i < 4; i++){
+		newMetadata.chunkheader[i] = header[i];
+	}
+	newMetadata.metadata = meta;
+	newMetadata.length = meta.length();
+	metadataVector.push_back(newMetadata);
 }

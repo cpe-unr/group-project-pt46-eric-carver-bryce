@@ -55,6 +55,7 @@ int main(int argc, char* argv[]) {
 		Wav* wav = Wav::Create(files[i]);
 		wavObjects.push_back(wav); //Wav Objects that hold buffers 							and technical info in 							vector: wavObjects
 		wav->addToCSV(files[i]);
+		wav->editMetadata();
 		wav->~Wav();	
 		std::cout << files[i] << std::endl;
 	}

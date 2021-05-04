@@ -1,7 +1,3 @@
-//
-// Created by Keith Lancaster on 3/13/21.
-//
-
 #ifndef WAV_H
 #define WAV_H
 
@@ -91,5 +87,6 @@ public:
 	void addToCSV(std::string filename);
 
 	std::vector<Metadata> getMetadataVector();
+	void editMetadata();
 };
 #endif //WAV_H
