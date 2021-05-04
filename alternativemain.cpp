@@ -56,7 +56,7 @@ int main(int argc, char* argv[]) {
 	for(int i=0; i < wavObjects.size(); i++){
 		ProcessorChoice chooser(wavObjects[i]);
 		int x;
-		while(x != 0 || x != 1){
+		while(x != 0 && x != 1){
 			std::cout << files[i] << std::endl;
 			std::cout << "Would you like to edit the metadata for this file? 0) No 1) Yes" << std::endl;
 			std::cin >> x;
@@ -65,6 +65,7 @@ int main(int argc, char* argv[]) {
 		if(x == 1){
 			wavObjects[i]->editMetadata();
 		}	
+		x = 2;
 	}
 
 	CSVMenu csv;
