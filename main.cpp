@@ -58,6 +58,72 @@ int main(int argc, char* argv[]) {
 		wav->editMetadata();
 		wav->~Wav();	
 		std::cout << files[i] << std::endl;
+		
+	bool mainMenuShouldExit = false;
+	while( !mainMenuShouldExit )
+	{
+		Gui::MainMenu::MENU_CHOICE mainMenuChoice   = 	Gui::MainMenu::getMenuChoice();
+	int processingMenuChoice = 0;	
+	switch( mainMenuChoice )
+		{
+		case Gui::FileMenu::PROCESS:
+					{
+						//int processingMenuChoice = 0;
+						while( processingMenuChoice = Gui::ProcessingMenu::getMenuChoice() )
+						{
+							if( processingMenuChoice == Gui::ProcessingMenu::UNKNOWN )
+							{
+						std::cout << "Unknown option choice" << std::endl;
+continue;
+						}
+						if( processingMenuChoice & Gui::ProcessingMenu::NORMALISATION )
+						{
+						std::cout << "Normlising" << std::endl;
+						}
+						if( processingMenuChoice & Gui::ProcessingMenu::NOISE_GATING )
+						{
+						std::cout << "Noise Gating" << std::endl;
+						}
+						if( processingMenuChoice & Gui::ProcessingMenu::ECHO )
+						{
+						std::cout << "Echo" << std::endl;
+						}
+					}
+					break;
+	case Gui::MainMenu::FILE:
+{
+			bool fileMenuShouldExit = false;
+			while( !fileMenuShouldExit )
+			{
+				Gui::FileMenu::MENU_CHOICE fileMenuChoice = Gui::FileMenu::getMenuChoice();
+				switch( fileMenuChoice )
+				{
+				case Gui::FileMenu::EXIT:
+					std::cout << "Goodbye" << std::endl;
+							return 0;
+					break;
+				case Gui::FileMenu::EDIT_FILE_NAME:
+					std::cout << "Editing Filename" << std::endl;
+					break;
+				
+				}
+				break;
+			case Gui::FileMenu::EXIT:
+				fileMenuShouldExit = true;
+				break;
+			default:
+	std::cerr << "Invalid option " << (int)fileMenuChoice << std::endl;
+			}
+		}
+	}
+	break;
+case Gui::MainMenu::EXIT:
+	mainMenuShouldExit = true;
+	break;
+default:
+	std::cerr << "Invalid option " << (int)mainMenuChoice << std::endl;
+}
+
 	}
 
 
