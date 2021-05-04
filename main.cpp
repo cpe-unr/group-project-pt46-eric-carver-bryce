@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
 		return 0;
 	}
 
-	Directory dir;
+	/*Directory dir;
 	std::vector<std::string> files;
 	files = dir.getFileNames(argv[1]); //Audio files are stored in vector: files
 
@@ -58,11 +58,14 @@ int main(int argc, char* argv[]) {
 		wav->editMetadata();
 		wav->~Wav();	
 		std::cout << files[i] << std::endl;
+	}*/
 		
 	bool mainMenuShouldExit = false;
+	bool fileMenuShouldExit = false;	
+	int fileChoice = 0;
 	while( !mainMenuShouldExit )
 	{
-		Gui::MainMenu::MENU_CHOICE mainMenuChoice   = 	Gui::MainMenu::getMenuChoice();
+		Gui::MainMenu::MENU_CHOICE mainMenuChoice   = 		Gui::MainMenu::getMenuChoice();
 	int processingMenuChoice = 0;	
 	switch( mainMenuChoice )
 		{
@@ -91,11 +94,13 @@ continue;
 					}
 					break;
 	case Gui::MainMenu::FILE:
-{
-			bool fileMenuShouldExit = false;
+	{
+			
 			while( !fileMenuShouldExit )
 			{
+				{
 				Gui::FileMenu::MENU_CHOICE fileMenuChoice = Gui::FileMenu::getMenuChoice();
+				fileChoice = fileMenuChoice;
 				switch( fileMenuChoice )
 				{
 				case Gui::FileMenu::EXIT:
@@ -107,12 +112,14 @@ continue;
 					break;
 				
 				}
+				}
+				
 				break;
 			case Gui::FileMenu::EXIT:
 				fileMenuShouldExit = true;
 				break;
 			default:
-	std::cerr << "Invalid option " << (int)fileMenuChoice << std::endl;
+	std::cerr << "Invalid option " << (int)fileChoice << std::endl;		
 			}
 		}
 	}
