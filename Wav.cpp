@@ -83,6 +83,7 @@ Wav::Wav(){}
 
 Wav::Wav(const Wav& rhs){
 	waveHeader = rhs.waveHeader;
+	metadataVector = rhs.metadataVector;
 }
 
 bool Wav::isStereo() {
@@ -119,7 +120,9 @@ void Wav::makeCSV(){
 	     << "byte_rate" << ", "
 	     << "sample_alignment" << ", "
 	     << "bit_depth" << ", "
-	     << "data_bytes"
+	     << "data_bytes" << ", "
+	     << " " << ", "
+	     << "Metadata"
 	     << "\n";
 
 	fout.close();
@@ -140,9 +143,18 @@ void Wav::addToCSV(std::string filename){
 	     << waveHeader.byte_rate << ", "
 	     << waveHeader.sample_alignment << ", "
 	     << waveHeader.bit_depth << ", "
-	     << waveHeader.data_bytes
-	     << "\n";
+	     << waveHeader.data_bytes << ", "
+	     << " " << ", "
+	     << " " << ", ";
+	     for(int i = 0; i < metadataVector.size(); i++){
+		fout << metadataVector[i].metadata << ", ";
+		std::cout << "meta" << metadataVector[i].metadata << std::endl;
+	     }
+	fout << "\n";
 
 	fout.close();
 }
 
+std::vector<Metadata> Wav::getMetadataVector(){
+	return metadataVector;
+}
