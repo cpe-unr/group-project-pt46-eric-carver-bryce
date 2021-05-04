@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <cstring>
+#include <iomanip>
 #include "Wav.h"
 #include "16bitstereo.h"
 #include "8bitstereo.h"
@@ -160,12 +161,15 @@ void Wav::editMetadata(){
 
 	std::cout << "Current Metadata: " << std::endl;
 	for(int i = 0; i < metadataVector.size(); i++){
-		std::cout << metadataVector[i].chunkheader
+		std::cout << metadataVector[i].chunkheader << " "
 		  	  << metadataVector[i].metadata << std::endl;		  
 	}
 
-	std::cout << "Enter Metadata Chunk Header: ";
-	std::cin >> header;
+	while(!((header[0] >= 65 && header[0] <= 90) && (header[1] >= 65 && header[1] <= 90) && (header[2] >= 65 && header[2] <= 90) && (header[3] >= 65 && header[3] <= 90))){
+		std::cout << "Enter Metadata Chunk Header: ";
+		std::cin >> header;
+	};
+	
 	std::cout << "Enter Metadata: ";
 	std::cin >> meta;
 
