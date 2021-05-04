@@ -15,7 +15,7 @@ Include dependency graph for main.\+cpp\+:
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{main_8cpp_ad9d0e397081801b3c81f84aef014b9ca}{fn} ()
-\begin{DoxyCompactList}\small\item\em The function bar. \end{DoxyCompactList}\item 
+\item 
 \mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
 int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
@@ -28,31 +28,4 @@ int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
 \subsubsection{\texorpdfstring{fn()}{fn()}}
 {\footnotesize\ttfamily void fn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-The function bar. 
-
-This function does something which is doing nothing. So this text is totally senseless and you really do not need to read this, because this text is basically saying nothing.
-
-\begin{DoxyNote}{Note}
-This text shall only show you, how such a "note" section is looking. There is nothing which really needs your notice, so you do not really need to read this section.
-\end{DoxyNote}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\tt in}  & {\em a} & Description of parameter a. \\
-\hline
-\mbox{\tt out}  & {\em b} & Description of the parameter b. \\
-\hline
-\mbox{\tt in,out}  & {\em c} & Description of the parameter c.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The error return code of the function.
-\end{DoxyReturn}
-
-\begin{DoxyRetVals}{Return values}
-{\em E\+R\+R\+\_\+\+S\+U\+C\+C\+E\+SS} & The function is successfully executed \\
-\hline
-{\em E\+R\+R\+\_\+\+F\+A\+I\+L\+U\+RE} & An error occurred \\
-\hline
-\end{DoxyRetVals}
+Main Function 
