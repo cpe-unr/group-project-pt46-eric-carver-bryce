@@ -154,10 +154,6 @@ void Wav::addToCSV(std::string filename){
 	fout.close();
 }
 
-std::vector<Metadata> Wav::getMetadataVector(){
-	return metadataVector;
-}
-
 void Wav::editMetadata(){
 	char header[4];
 	std::string meta;

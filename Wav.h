@@ -86,7 +86,9 @@ public:
 	*/
 	void addToCSV(std::string filename);
 
-	std::vector<Metadata> getMetadataVector();
+	/**
+	Edits metadata based on user input. 
+	*/
 	void editMetadata();
 };
 #endif //WAV_H
