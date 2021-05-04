@@ -79,15 +79,15 @@ int main(int argc, char* argv[]) {
 						std::cout << "Unknown option choice" << std::endl;
 continue;
 						}
-						if( processingMenuChoice & Gui::ProcessingMenu::NORMALISATION )
+						if( processingMenuChoice && Gui::ProcessingMenu::NORMALISATION )
 						{
 						std::cout << "Normlising" << std::endl;
 						}
-						if( processingMenuChoice & Gui::ProcessingMenu::NOISE_GATING )
+						if( processingMenuChoice && Gui::ProcessingMenu::NOISE_GATING )
 						{
 						std::cout << "Noise Gating" << std::endl;
 						}
-						if( processingMenuChoice & Gui::ProcessingMenu::ECHO )
+						if( processingMenuChoice && Gui::ProcessingMenu::ECHO )
 						{
 						std::cout << "Echo" << std::endl;
 						}

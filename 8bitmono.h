@@ -17,7 +17,17 @@ public:
 	@param wav - wav object
 	*/
 	EightBitMono(const Wav& wav);
-
-
+	/**
+	Makes the compiler happy - does nothing useful
+	
+	@returns buffer
+	*/
+	unsigned char* getLeftBuffer(){return getBuffer();}
+	/**
+	Makes the compiler happy - does nothing useful
+	
+	@returns buffer
+	*/
+	unsigned char* getRightBuffer(){return getBuffer();}
 };
 #endif

@@ -22,6 +22,17 @@ public:
 	@param outFileName - name of new wav file
 	*/
 	void writeFile(const std::string &outFileName) override;
-
+	/**
+	Makes the compiler happy - does nothing useful
+	
+	@returns buffer
+	*/
+	short* getLeftBuffer(){return getBuffer();}
+	/**
+	Makes the compiler happy - does nothing useful
+	
+	@returns buffer
+	*/
+	short* getRightBuffer(){return getBuffer();}
 };
 #endif
