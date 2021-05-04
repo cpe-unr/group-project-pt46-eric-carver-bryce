@@ -8,7 +8,6 @@ void EightBitStereo::makeStereoBuffer(const Wav& wav){
 	unsigned char *buffer = wav.getBuffer();
 	rightBuffer = new unsigned char[(wav.getBufferSize())/2];
 	leftBuffer = new unsigned char[(wav.getBufferSize())/2];
-	std::cout << wav.getBufferSize() << std::endl;
 	
 	for(int j = 0; j < wav.getBufferSize(); j += 2){
 		//std::cout << "j" << j << std::endl;

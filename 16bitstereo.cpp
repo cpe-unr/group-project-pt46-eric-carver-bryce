@@ -7,7 +7,6 @@ void SixteenBitStereo::makeStereoBuffer(const Wav& wav){
 	shortBuffer = wav.getShortBuffer();
 	rightShortBuffer = new short[(wav.getBufferSize())/2];
 	leftShortBuffer = new short[(wav.getBufferSize())/2];
-	std::cout << wav.getBufferSize() << std::endl;
 	
 	for(int j = 0; j < (wav.getBufferSize() - 2); j += 2){
 		//std::cout << "j" << j << std::endl;
@@ -23,7 +22,6 @@ void SixteenBitStereo::makeStereoBuffer(const Wav& wav){
 }	
 
 SixteenBitStereo::SixteenBitStereo(const Wav& wav): Wav(wav) {
-	std::cout << "hey from constructor" << std::endl;
 	makeStereoBuffer(wav);
 }
 
