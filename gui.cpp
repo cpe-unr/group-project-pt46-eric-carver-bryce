@@ -1,4 +1,4 @@
-#include "Gui.h"
+#include "gui.h"
 
 #include <iostream>
 #include <sstream>
@@ -8,15 +8,15 @@
 using namespace std;
 
 
-const Gui::MainMenu::MENU_CHOICE Gui::MainMenu::getMenuChoice()
+Gui::MainMenu::MENU_CHOICE Gui::MainMenu::getMenuChoice()
 {
     cout << "Would you like to edit the metadata?" << endl;
-    cout << "0) Exit program"
+    cout << "0) Exit program";
     cout << "1) Yes" << endl;
     cout << "2) No"  << endl;
     int choice;
     cin >> choice;
-    return (Gui::MENU_CHOICE)choice;
+    return (Gui::MainMenu::MENU_CHOICE)choice;
 }
 
 int Gui::ProcessingMenu::getMenuChoice()
@@ -61,22 +61,22 @@ int Gui::ProcessingMenu::getMenuChoice()
 }
 
 
-const Gui::FileMenu::MENU_CHOICE Gui::FileMenu::getMenuChoice()
-{
+Gui::FileMenu::MENU_CHOICE Gui::FileMenu::getMenuChoice()
+{ 
     cout << "Would you like to edit the processed file's name?" << endl;
     cout << "0) Exit program" << endl;
     cout << "1) Edit file name" << endl;
     int choice;
     cin >> choice;
-    return (Gui::MENU_CHOICE)choice;
+    return (Gui::FileMenu::MENU_CHOICE)choice;
 }
 
-const Gui::CSVmenu::MENU_CHOICE Gui::CSVmenu::getMenuChoice()
+Gui::CSVMenu::MENU_CHOICE Gui::CSVMenu::getMenuChoice()
 {
     cout << "Would you like to create a CSV file?" << endl; 
     cout << "0) Exit program" << endl;
     cout << "1) Create CSV file" << endl; 
     int choice; 
     cin >> choice;
-    return (Gui::MENU_CHOICE)choice;
+    return (Gui::CSVMenu::MENU_CHOICE)choice;
 }
