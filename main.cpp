@@ -93,8 +93,8 @@ continue;
 						}
 					}
 					break;
-	case Gui::MainMenu::FILE:
-	{
+		case Gui::MainMenu::FILE:
+		{
 			
 			while( !fileMenuShouldExit )
 			{
@@ -111,15 +111,13 @@ continue;
 					std::cout << "Editing Filename" << std::endl;
 					break;
 				
+				/*case Gui::FileMenu::EXIT:
+					fileMenuShouldExit = true;
+				break;*/
+				default:
+					std::cerr << "Invalid option " << (int)fileChoice << std::endl;	
 				}
-				}
-				
-				break;
-			case Gui::FileMenu::EXIT:
-				fileMenuShouldExit = true;
-				break;
-			default:
-	std::cerr << "Invalid option " << (int)fileChoice << std::endl;		
+				}	
 			}
 		}
 	}
