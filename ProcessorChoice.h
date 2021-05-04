@@ -15,6 +15,6 @@
 class ProcessorChoice{
 	Wav* wavObject;
 public:
-	ProcessorChoice(Wav* inputObject){wavObject = inputObject;}
+	ProcessorChoice(Wav *inputObject){wavObject = inputObject;}
 	void GetInput();
 };

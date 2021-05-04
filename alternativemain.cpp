@@ -6,6 +6,7 @@
 #include "Wav.h"
 #include "directory.h"
 #include "Processor.h"
+#include "ProcessorChoice.h"
 #include "Gui.h"
 #include "CSVmenu.h"
 
@@ -43,7 +44,7 @@ int main(int argc, char* argv[]) {
 	Directory dir;
 	std::vector<std::string> files;
 	files = dir.getFileNames(argv[1]); //Audio files are stored in vector: files
-
+	
 	std::vector<Wav*> wavObjects;
 	for(int i=0; i < files.size(); i++){ 
 		Wav* wav = Wav::Create(files[i]);
@@ -52,6 +53,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	for(int i=0; i < wavObjects.size(); i++){
+		ProcessorChoice chooser(wavObjects[i]);
 		int x;
 		while(x != 0 || x != 1){
 			std::cout << files[i] << std::endl;

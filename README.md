@@ -12,4 +12,4 @@ DESIGN DESCRIPTION:
 
 CHALLENGES FACED:
 
-
+Never having dealt with a program this large before
