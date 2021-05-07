@@ -6,7 +6,7 @@ Eric Ashton Westenburg - File I/O, User Interaction
 
 Carver Goldstein - Wav Processors, User Interaction
 
-Bryce Millis
+Bryce Millis - User Interaction
 
 ## DESIGN DESCRIPTION:
 
